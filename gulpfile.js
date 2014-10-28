@@ -40,10 +40,10 @@ function copyFeatures() {
 }
 
 function injectFeatures() {
-    return gulp.src("./index.html")
+    return gulp.src("src/index.html")
         .pipe(inject(gulp.src('./src/features/**/*.css', {read: false}), {relative: true}))
         .pipe(inject(gulp.src('./src/features/**/*.js', {read: false}), {relative: true}))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('dist/'));
 }
 
 gulp.task('copy-js', copyJs);
