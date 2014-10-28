@@ -39,6 +39,10 @@ function copyFeatures() {
         .pipe(gulp.dest('dist/features'))
 }
 
+function copyPackages() {
+    return gulp.src("packages/**/*.*")
+        .pipe(gulp.dest('dist/packages'));
+}
 function injectFeatures() {
     return gulp.src("src/index.html")
         .pipe(inject(gulp.src('./src/features/**/*.css', {read: false}), {relative: true}))
@@ -53,6 +57,8 @@ gulp.task('copy-css', copyCss);
 gulp.task('copy-fonts', copyFonts);
 
 gulp.task('copy-features', copyFeatures);
+
+gulp.task('copy-packages', copyPackages);
 
 gulp.task('inject-features', injectFeatures);
 
@@ -73,7 +79,7 @@ gulp.task('watch', function () {
 });
 
 // Dev build
-gulp.task('dev', ['copy-js', 'copy-fonts', 'copy-css', 'copy-features', 'inject-features', 'watch']);
+gulp.task('dev', ['copy-js', 'copy-fonts', 'copy-css', 'copy-features', 'copy-packages', 'inject-features', 'watch']);
 
 // Build All
-gulp.task('build', ['copy-js', 'copy-fonts', 'copy-css', 'copy-features', 'inject-features', 'clean']);
+gulp.task('build', ['copy-js', 'copy-fonts', 'copy-css', 'copy-features', 'copy-packages', 'inject-features', 'clean']);
