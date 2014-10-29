@@ -7,13 +7,6 @@ var inject = require('gulp-inject');
 var watch = require('gulp-watch');
 var del = require('del');
 
-
-var paths = {
-    scripts: ['src/js/**/*.js'],
-    css: 'src/css/**/*.css',
-    features: 'src/features/**/views/*.html'
-};
-
 gulp.task('clean', function (cb) {
     // You can use multiple globbing patterns as you would with `gulp.src`
     del(['dist'], cb);
@@ -21,22 +14,22 @@ gulp.task('clean', function (cb) {
 
 function copyJs() {
     return gulp.src("src/js/**/*.js")
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist/js'));
 }
 
 function copyCss() {
     return gulp.src("src/css/**/*.css")
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/css'));
 }
 
 function copyFonts() {
     return gulp.src("src/fonts/*.*")
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts'));
 }
 
 function copyFeatures() {
     return gulp.src(["src/features/**/*.html", "src/features/**/*.js", "src/features/**/*.css"])
-        .pipe(gulp.dest('dist/features'))
+        .pipe(gulp.dest('dist/features'));
 }
 
 function copyPackages() {
@@ -45,8 +38,8 @@ function copyPackages() {
 }
 function injectFeatures() {
     return gulp.src("src/index.html")
-        .pipe(inject(gulp.src('./src/features/**/*.css', {read: false}), {relative: true}))
-        .pipe(inject(gulp.src('./src/features/**/*.js', {read: false}), {relative: true}))
+        .pipe(inject(gulp.src('./src/features/**/*.css', {read: false}), {relative: true, name: 'features'}))
+        .pipe(inject(gulp.src('./src/features/**/*.js', {read: false}), {relative: true, name: 'features'}))
         .pipe(gulp.dest('dist/'));
 }
 

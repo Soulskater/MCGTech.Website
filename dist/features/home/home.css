@@ -10,7 +10,8 @@
   font-size: 0;
 }
 .menu-box {
-  width: 300px;
+  width: 33%;
+  max-width: 300px;
   height: 200px;
   border: 1px solid #2f323a;
   text-align: center;
@@ -25,4 +26,20 @@
 }
 .menu-box:last-child {
   border-right: 1px solid #2f323a;
+}
+@media (max-height: 530px) {
+  .menu-wrapper {
+    margin-top: -10px;
+    padding: 10px 10px;
+  }
+  .menu-box {
+    height: 50px;
+    border: none;
+  }
+  .menu-box div {
+    margin-top: 5px !important;
+  }
+  .menu-box:last-child {
+    border-right: none;
+  }
 }
