@@ -2,7 +2,6 @@
 .menu-wrapper {
   margin-top: -125px;
   padding: 50px 10px;
-  background: #38a1d2;
   position: absolute;
   left: 0;
   right: 0;
@@ -10,10 +9,10 @@
   font-size: 0;
 }
 .menu-box {
+  margin: 5px;
   width: 33%;
   max-width: 300px;
   height: 200px;
-  border: 1px solid #2f323a;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -22,10 +21,7 @@
   cursor: pointer;
 }
 .menu-box:hover {
-  color: #C5E9FF;
-}
-.menu-box:last-child {
-  border-right: 1px solid #2f323a;
+  color: #c5e9ff;
 }
 @media (max-height: 530px) {
   .menu-wrapper {

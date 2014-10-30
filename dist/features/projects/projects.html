@@ -1,4 +1,8 @@
 
 <div ng-controller="ProjectsCtrl">
     <div class="font-xl text-center space l top">Projects</div>
+
+    <div class="projects-list">
+        <div class="project-item font-s" ng-repeat="project in projects" ng-style="{ background: project.color }">{{project.name}}</div>
+    </div>
 </div>

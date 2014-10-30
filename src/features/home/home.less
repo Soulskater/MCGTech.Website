@@ -3,7 +3,6 @@
 .menu-wrapper {
     margin-top: -125px;
     padding: 50px 10px;
-    background: @light-blue;
     position: absolute;
     left: 0;
     right: 0;
@@ -12,10 +11,10 @@
 }
 
 .menu-box {
+    margin: 5px;
     width: 33%;
     max-width: 300px;
     height: 200px;
-    border: 1px solid @blue;
     text-align: center;
     color: @white;
     display: inline-block;
@@ -23,11 +22,7 @@
     border-right: none;
     cursor: pointer;
     &:hover {
-        color: #C5E9FF;
-    }
-
-    &:last-child {
-        border-right: 1px solid @blue;
+        color: @lighter-blue;
     }
 }
 

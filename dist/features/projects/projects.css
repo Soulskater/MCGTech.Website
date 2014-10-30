@@ -1,0 +1,18 @@
+/*Colors*/
+.projects-list {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+}
+.projects-list .project-item {
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  display: inline-block;
+}
+.projects-list .project-item:hover {
+  color: #c5e9ff !important;
+}
