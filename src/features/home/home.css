@@ -1,11 +1,6 @@
 /*Colors*/
 .menu-wrapper {
-  margin-top: -125px;
   padding: 50px 10px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
   font-size: 0;
 }
 .menu-box {
@@ -21,7 +16,7 @@
   cursor: pointer;
 }
 .menu-box:hover {
-  color: #c5e9ff;
+  color: #C5C5C5;
 }
 @media (max-height: 530px) {
   .menu-wrapper {

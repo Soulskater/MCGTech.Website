@@ -27,6 +27,9 @@ body a:active {
   background: #2f323a;
   border-bottom: 1px solid #38a1d2;
 }
+.header span {
+  font-size: 2.0rem !important;
+}
 .footer {
   position: absolute;
   left: 0;
@@ -36,15 +39,73 @@ body a:active {
   text-align: center;
   background: #2f323a;
 }
-@keyframes scaleUp {
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.icon.back {
+  background-image: url("../images/back_48X48.png");
+  width: 48px;
+  height: 48px;
+}
+.view-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  overflow: hidden;
+}
+.view-animation.ng-enter,
+.view-animation.ng-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.view-animation.ng-enter {
+  -webkit-animation: 0.3s view-animation-enter;
+  animation: 0.3s view-animation-enter;
+}
+.view-animation.ng-leave {
+  -webkit-animation: 0.3s view-animation-leave;
+  animation: 0.3s view-animation-leave;
+}
+@keyframes view-animation-enter {
   from {
-    opacity: 0.3;
-    -webkit-transform: scale(0.8);
+    z-index: 100;
+    right: -3000px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
   }
 }
-@keyframes scaleOut {
+@keyframes view-animation-leave {
   from {
-    opacity: 1;
-    -webkit-transform: scale(0);
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: -3000px;
+  }
+}
+@-webkit-keyframes view-animation-enter {
+  from {
+    z-index: 100;
+    right: -3000px;
+  }
+  to {
+    left: 0;
+  }
+}
+@-webkit-keyframes view-animation-leave {
+  from {
+    z-index: 101;
+    left: 0;
+  }
+  to {
+    left: -3000px;
   }
 }

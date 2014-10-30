@@ -29,12 +29,14 @@
     <script type="text/javascript" src="js/modules.js"></script>
     <script type="text/javascript" src="js/routeConfig.js"></script>
     <script type="text/javascript" src="js/masterPageCtrl.js"></script>
+    <script type="text/javascript" src="js/navigationService.js"></script>
     <script type="text/javascript" src="js/controls/menuDirective.js"></script>
     <!-- features:js -->
     <script src="features/about/aboutCtrl.js"></script>
-    <script src="features/blog/blogCtrl.js"></script>
     <script src="features/home/homeCtrl.js"></script>
     <script src="features/projects/projectsCtrl.js"></script>
+    <script src="features/projects/projectsService.js"></script>
+    <script src="features/blog/blogCtrl.js"></script>
     <!-- endinject -->
 
     <!-- features:css -->
@@ -46,14 +48,15 @@
 <div ng-controller="MasterPageCtrl">
     <!--Header-->
     <div class="header text-space m all">
-        <span class="font-m space xl right"><a href="#/home">Tech R&D</a></span>
-        <menu items="menuList"></menu>
+        <span class="font-l space xl right"><a href="#/home">Tech R&D</a></span>
     </div>
     <!--/Header-->
 
     <!--ContentView-->
-    <div ng-view>
+    <div class="view-container">
+        <div ng-view class="view-animation">
 
+        </div>
     </div>
     <!--/ContentView-->
     <div class="footer">
