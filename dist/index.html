@@ -23,25 +23,31 @@
 
     <script type="text/javascript" src="../packages/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../packages/angular/angular.js"></script>
+    <script type="text/javascript" src="../packages/angular-local-storage/dist/angular-local-storage.js"></script>
     <script type="text/javascript" src="../packages/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="../packages/angular-route/angular-route.js"></script>
 
     <script type="text/javascript" src="js/modules.js"></script>
     <script type="text/javascript" src="js/routeConfig.js"></script>
+    <script type="text/javascript" src="js/authService.js"></script>
+    <script type="text/javascript" src="js/authInterceptorService.js"></script>
     <script type="text/javascript" src="js/masterPageCtrl.js"></script>
     <script type="text/javascript" src="js/navigationService.js"></script>
     <script type="text/javascript" src="js/controls/menuDirective.js"></script>
     <!-- features:js -->
-    <script src="features/blog/blogCtrl.js"></script>
     <script src="features/about/aboutCtrl.js"></script>
+    <script src="features/blog/blogCtrl.js"></script>
     <script src="features/home/homeCtrl.js"></script>
     <script src="features/projects/projectsCtrl.js"></script>
     <script src="features/projects/projectsService.js"></script>
+    <script src="features/account/login/login.js"></script>
+    <script src="features/account/register/registerCtrl.js"></script>
     <!-- endinject -->
 
     <!-- features:css -->
     <link rel="stylesheet" href="features/home/home.css">
     <link rel="stylesheet" href="features/projects/projects.css">
+    <link rel="stylesheet" href="features/account/login/login.css">
     <!-- endinject -->
 </head>
 <body ng-app="MCGTech">
@@ -49,6 +55,7 @@
     <!--Header-->
     <div class="header text-space m all">
         <span class="font-l space xl right"><a href="#/home">Tech R&D</a></span>
+        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/login">Login</a>, or <a href="#/signup">Sign up</a></span>
     </div>
     <!--/Header-->
 

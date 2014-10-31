@@ -1,0 +1,13 @@
+<div class="font-xl text-center space l top">Login</div>
+<div class="form-wrapper space l top">
+    <form class="form" role="form">
+        <input type="text" class="font-s form-control space m bottom" placeholder="Email"
+               data-ng-model="loginData.userName" required autofocus>
+        <input type="password" class="font-s form-control" placeholder="Password" data-ng-model="loginData.password"
+               required>
+        <button class="form-button font-s pull-right space m top" type="submit" data-ng-click="login()">Login</button>
+        <div data-ng-hide="message == ''" class="alert alert-danger">
+            {{message}}
+        </div>
+    </form>
+</div>

@@ -23,11 +23,14 @@
 
     <script type="text/javascript" src="../packages/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../packages/angular/angular.js"></script>
+    <script type="text/javascript" src="../packages/angular-local-storage/dist/angular-local-storage.js"></script>
     <script type="text/javascript" src="../packages/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="../packages/angular-route/angular-route.js"></script>
 
     <script type="text/javascript" src="js/modules.js"></script>
     <script type="text/javascript" src="js/routeConfig.js"></script>
+    <script type="text/javascript" src="js/authService.js"></script>
+    <script type="text/javascript" src="js/authInterceptorService.js"></script>
     <script type="text/javascript" src="js/masterPageCtrl.js"></script>
     <script type="text/javascript" src="js/navigationService.js"></script>
     <script type="text/javascript" src="js/controls/menuDirective.js"></script>
@@ -42,6 +45,7 @@
     <!--Header-->
     <div class="header text-space m all">
         <span class="font-l space xl right"><a href="#/home">Tech R&D</a></span>
+        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/login">Login</a>, or <a href="#/signup">Sign up</a></span>
     </div>
     <!--/Header-->
 

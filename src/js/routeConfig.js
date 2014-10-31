@@ -5,6 +5,14 @@ angular.module("MCGTech")
     .config(['$routeProvider', '$locationProvider',
         function ($routeProvider, $locationProvider) {
             $routeProvider.
+                when("/login", {
+                    templateUrl: "features/account/login/login.html",
+                    controller: "LoginCtrl"
+                }).
+                when("/signup", {
+                    templateUrl: "features/account/register/register.html",
+                    controller: "RegisterCtrl"
+                }).
                 when('/projects', {
                     templateUrl: 'features/projects/projects.html',
                     controller: 'ProjectsCtrl'
