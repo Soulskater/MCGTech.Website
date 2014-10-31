@@ -3,10 +3,12 @@
  */
 angular.module("MCGTech")
     .service("projectsService", ["$q", "$http", function ($q, $http) {
+        var baseUrl = "http://mcgtechservice.azurewebsites.net/";
+
         return {
             getProjects: function () {
                 var defer = $q.defer();
-                $http.get("http://localhost:49994/api/project").success(function (projects) {
+                $http.get(baseUrl + "api/project").success(function (projects) {
                     defer.resolve(projects);
                 }).error(function (ex) {
                     defer.reject(ex);
