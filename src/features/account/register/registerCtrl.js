@@ -8,7 +8,9 @@ angular.module("MCGTech")
         $scope.message = "";
 
         $scope.registration = {
-            email: "",
+            userName: "",
+            firstName: "",
+            lastName: "",
             password: "",
             confirmPassword: ""
         };

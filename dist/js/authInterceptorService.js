@@ -20,7 +20,7 @@ angular.module("MCGTech")
 
         var _responseError = function (rejection) {
             if (rejection.status === 401) {
-                $navigation.go('/login');
+                //$navigation.go('/login');
             }
             return $q.reject(rejection);
         }
@@ -29,4 +29,7 @@ angular.module("MCGTech")
         authInterceptorServiceFactory.responseError = _responseError;
 
         return authInterceptorServiceFactory;
-    }]);
+    }])
+    .config(function ($httpProvider) {
+        $httpProvider.interceptors.push('authInterceptorService');
+    });

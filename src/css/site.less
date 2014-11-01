@@ -32,9 +32,15 @@ body {
     background: @blue;
     color: @white;
     border-bottom: 1px solid @light-blue;
+    .user-info {
+        line-height: 20px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
 }
 
-.footer{
+.footer {
     position: absolute;
     left: 0;
     right: 0;
@@ -44,82 +50,142 @@ body {
     background: @blue;
 }
 
-.icon{
-    display: inline-block;
-    background-repeat: no-repeat;
-
-    &.back{
-        background-image: url("../images/back_48X48.png");
+.icon {
+    &-back {
+        display: inline-block;
+        background: url("../images/back_48X48.png") no-repeat;
         width: 48px;
         height: 48px;
+    }
+
+    &-loading32 {
+        display: inline-block;
+        background: url("../images/loading_32X34.GIF") no-repeat;
+        width: 32px;
+        height: 34px;
+    }
+    &-loading48 {
+        display: inline-block;
+        background: url("../images/loading_48X51.GIF") no-repeat;
+        width: 48px;
+        height: 51px;
     }
 }
 
 //View Animation
 .view-container {
-    position:absolute;
-    top:50px;
-    left:0;
-    right:0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
     bottom: 100px;
     overflow: hidden;
 }
 
 .view-animation.ng-enter, .view-animation.ng-leave {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .view-animation.ng-enter {
-    -webkit-animation: 0.3s view-animation-enter;
-    animation: 0.3s view-animation-enter;
+    -webkit-animation: 2.3s view-animation-enter;
+    animation: 2.3s view-animation-enter;
 }
 
 .view-animation.ng-leave {
-    -webkit-animation: 0.3s view-animation-leave;
-    animation: 0.3s view-animation-leave;
+    -webkit-animation: 2.3s view-animation-leave;
+    animation: 2.3s view-animation-leave;
 }
 
 @keyframes view-animation-enter {
     from {
-        z-index:100;
-        right:-3000px;
-        opacity:0;
+        z-index: 100;
+        right: -3000px;
+        opacity: 0;
     }
     to {
-        left:0;
-        opacity:1;
+        left: 0;
+        opacity: 1;
     }
 }
 
 @keyframes view-animation-leave {
     from {
-        z-index:101;
-        left:0;
+        z-index: 101;
+        left: 0;
     }
     to {
-        left:-3000px;
+        left: -3000px;
     }
 }
 
 @-webkit-keyframes view-animation-enter {
     from {
-        z-index:100;
-        right:-3000px;
+        z-index: 100;
+        right: -3000px;
     }
     to {
-        left:0;
+        left: 0;
     }
 }
 
 @-webkit-keyframes view-animation-leave {
     from {
-        z-index:101;
-        left:0;
+        z-index: 101;
+        left: 0;
     }
     to {
-        left:-3000px;
+        left: -3000px;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    background: #DADADA;
+    border: 1px solid @light-blue;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px 5px;
+    margin: 10px 0 0 0;
+    right: 0;
+    min-width: 150px;
+    color: @black;
+    box-shadow: 0px 0px 2px @light-blue;
+    z-index: 100;
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 14.0px 11px 14.0px;
+        border-color: transparent transparent @light-blue transparent;
+        top: -11px;
+        right: 8px;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 12.5px 10px 12.5px;
+        border-color: transparent transparent #DADADA transparent;
+        top: -10px;
+        right: 10px;
+    }
+
+    .dropdown-item {
+        position: relative;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background: #C7C7C7;
+        }
     }
 }

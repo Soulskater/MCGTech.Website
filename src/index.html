@@ -33,7 +33,7 @@
     <script type="text/javascript" src="js/authInterceptorService.js"></script>
     <script type="text/javascript" src="js/masterPageCtrl.js"></script>
     <script type="text/javascript" src="js/navigationService.js"></script>
-    <script type="text/javascript" src="js/controls/menuDirective.js"></script>
+    <script type="text/javascript" src="js/controls/dropdownDirective.js"></script>
     <!-- features:js -->
     <!-- endinject -->
 
@@ -45,7 +45,17 @@
     <!--Header-->
     <div class="header text-space m all">
         <span class="font-l space xl right"><a href="#/home">Tech R&D</a></span>
-        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/login">Login</a>, or <a href="#/signup">Sign up</a></span>
+        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/loginnn">Login</a>, or <a
+                href="#/signup">Sign up</a></span>
+
+        <div ng-if="authService.user.isAuthenticated" class="font-s user-info text-right">
+            <div>{{userProfile.firstName}}</div>
+            <div>{{userProfile.lastName}}
+                <dropdown>
+                    <dropdown-item class="font-s" ng-click="logOut()">Logout</dropdown-item>
+                </dropdown>
+            </div>
+        </div>
     </div>
     <!--/Header-->
 

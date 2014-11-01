@@ -1,19 +1,26 @@
 /*Colors*/
 .form-wrapper {
   text-align: center;
+  padding: 0 5px;
+  overflow: hidden;
 }
 .form {
-  display: inline-block;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 300px;
 }
-.form-control {
+.form .form-control-box {
+  border: 1px solid #adb1b6;
+  background: #ffffff;
   padding-left: 5px;
+}
+.form .form-control {
+  border: none;
   height: 35px;
   width: 100%;
   display: block;
 }
-.form-button {
+.form .form-button {
   border: none;
   height: 35px;
   line-height: 35px;
@@ -21,4 +28,22 @@
   background: #38a1d2;
   color: #ffffff;
   padding: 0;
+  cursor: pointer;
+}
+.form .form-button:hover {
+  color: #c5e9ff;
+}
+.form .form-button:disabled {
+  cursor: inherit;
+  background: #adb1b6;
+}
+.form .form-button:disabled:hover {
+  color: #ffffff;
+}
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+.alert {
+  color: #d33b3b;
 }
