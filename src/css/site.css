@@ -77,12 +77,12 @@ body a:active {
   right: 0;
 }
 .view-animation.ng-enter {
-  -webkit-animation: 2.3s view-animation-enter;
-  animation: 2.3s view-animation-enter;
+  -webkit-animation: 0.3s view-animation-enter;
+  animation: 0.3s view-animation-enter;
 }
 .view-animation.ng-leave {
-  -webkit-animation: 2.3s view-animation-leave;
-  animation: 2.3s view-animation-leave;
+  -webkit-animation: 0.3s view-animation-leave;
+  animation: 0.3s view-animation-leave;
 }
 @keyframes view-animation-enter {
   from {
