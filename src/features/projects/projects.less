@@ -1,26 +1,133 @@
 @import "../../css/site.colors.less";
 
-@color1:#78818a;
-@color2:#75b749;
-@color3:#f27b53;
-@color4:#0eadd4;
-@color5:#9e4b9d;
+@color1: #78818a;
+@color2: #75b749;
+@color3: #f27b53;
+@color4: #0eadd4;
+@color5: #9e4b9d;
 
-.projects-list{
+.projects-list {
     color: @white;
     text-align: center;
-    padding-top: 30px;
+    font-size: 0;
 
-    .project-item{
+    .project-item {
         margin: 5px;
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        height: 200px;
         text-align: center;
-        cursor: pointer;
+        cursor: default;
         padding: 5px;
         display: inline-block;
+        position: relative;
+        vertical-align: top;
+        .description {
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: 1.05rem;
+        }
+
         &:hover{
-            color: #C5C5C5!important;
+            .nav-bar{
+                -webkit-animation: 0.3s open-animation;
+                animation: 0.3s open-animation;
+                -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .nav-bar {
+            @navbar-height: 40px;
+
+            position: absolute;
+            background: @dark-grey;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: @navbar-height;
+            line-height: @navbar-height;
+            opacity: 0.8;
+
+            -webkit-animation: 0.3s close-animation;
+            animation: 0.3s close-animation;
+            -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+            animation-fill-mode: forwards;
+
+            @keyframes open-animation {
+                from {
+                    height: 0;
+                    line-height: 0;
+                    opacity: 0;
+                }
+                to {
+                    height: @navbar-height;
+                    line-height: @navbar-height;
+                    opacity: 0.8;
+                }
+            }
+
+            @-webkit-keyframes open-animation {
+                from {
+                    height: 0;
+                    line-height: 0;
+                    opacity: 0;
+                }
+                to {
+                    opacity: 0.8;
+                    height: @navbar-height;
+                    line-height: @navbar-height;
+                }
+            }
+
+            @keyframes close-animation {
+                from {
+                    height: @navbar-height;
+                    line-height: @navbar-height;
+                    opacity: 0.8;
+                }
+                to {
+                    height: 0;
+                    line-height: 0;
+                    opacity: 0;
+                }
+            }
+
+            @-webkit-keyframes close-animation {
+                from {
+                    height: @navbar-height;
+                    line-height: @navbar-height;
+                    opacity: 0.8;
+                }
+                to {
+                    height: 0;
+                    line-height: 0;
+                    opacity: 0;
+                }
+            }
+        }
+
+        .demo-link {
+            position: relative;
+            cursor: pointer;
         }
     }
+
+    .line-break {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .projects-list {
+        .line-break:nth-child(4) {
+            display: inline-block;
+        }
+    }
+}
+
+.icon-git {
+    display: inline-block;
+    background: url("../../images/GitHub-32X32-Light.png") no-repeat;
+    width: 32px;
+    height: 32px;
 }

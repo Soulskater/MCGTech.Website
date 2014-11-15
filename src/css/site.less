@@ -26,6 +26,28 @@ body {
     }
 }
 
+.dark {
+    a:link {
+        cursor: pointer;
+        text-decoration: none;
+        color: @darker-grey !important;
+    }
+    /* visited link */
+    a:visited {
+        color: @darker-grey !important;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: @light-grey !important;
+    }
+
+    /* selected link */
+    a:active {
+        color: @darker-grey !important;
+    }
+}
+
 .header {
     height: 30px;
     line-height: 30px;

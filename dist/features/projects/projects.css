@@ -2,17 +2,109 @@
 .projects-list {
   color: #ffffff;
   text-align: center;
-  padding-top: 30px;
+  font-size: 0;
 }
 .projects-list .project-item {
   margin: 5px;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 200px;
   text-align: center;
-  cursor: pointer;
+  cursor: default;
   padding: 5px;
   display: inline-block;
+  position: relative;
+  vertical-align: top;
 }
-.projects-list .project-item:hover {
-  color: #C5C5C5!important;
+.projects-list .project-item .description {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.05rem;
+}
+.projects-list .project-item:hover .nav-bar {
+  -webkit-animation: 0.3s open-animation;
+  animation: 0.3s open-animation;
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+}
+.projects-list .project-item .nav-bar {
+  position: absolute;
+  background: #404040;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  opacity: 0.8;
+  -webkit-animation: 0.3s close-animation;
+  animation: 0.3s close-animation;
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+}
+@keyframes open-animation {
+  from {
+    height: 0;
+    line-height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes open-animation {
+  from {
+    height: 0;
+    line-height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@keyframes close-animation {
+  from {
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+  }
+  to {
+    height: 0;
+    line-height: 0;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes close-animation {
+  from {
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.8;
+  }
+  to {
+    height: 0;
+    line-height: 0;
+    opacity: 0;
+  }
+}
+.projects-list .project-item .demo-link {
+  position: relative;
+  cursor: pointer;
+}
+.projects-list .line-break {
+  display: none;
+}
+@media screen and (max-width: 1280px) {
+  .projects-list .line-break:nth-child(4) {
+    display: inline-block;
+  }
+}
+.icon-git {
+  display: inline-block;
+  background: url("../../images/GitHub-32X32-Light.png") no-repeat;
+  width: 32px;
+  height: 32px;
 }

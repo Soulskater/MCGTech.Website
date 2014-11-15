@@ -25,10 +25,14 @@ angular.module("MCGTech")
                     templateUrl: "features/account/login/login.html",
                     controller: "LoginCtrl"
                 }).
-                /*when("/signup", {
+                when("/signup", {
                     templateUrl: "features/account/register/register.html",
                     controller: "RegisterCtrl"
-                }).*/
+                }).
+                when("/flowdesigner", {
+                    templateUrl: "features/projects/flowdesigner/flowdesigner.html"
+                    //controller: "RegisterCtrl"
+                }).
                 otherwise({
                     redirectTo: '/home'
                 });

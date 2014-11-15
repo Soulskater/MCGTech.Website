@@ -21,6 +21,25 @@ body a:hover {
 body a:active {
   color: #ffffff;
 }
+.dark {
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+}
+.dark a:link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #060d1e !important;
+}
+.dark a:visited {
+  color: #060d1e !important;
+}
+.dark a:hover {
+  color: #adb1b6 !important;
+}
+.dark a:active {
+  color: #060d1e !important;
+}
 .header {
   height: 30px;
   line-height: 30px;

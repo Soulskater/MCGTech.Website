@@ -1,8 +1,20 @@
-<div ng-controller="ProjectsCtrl">
-    <div class="icon-back" ng-click="$navigation.go('/home')" style="position: absolute;margin-left: 30px;margin-top: 10px;"></div>
+<div>
+    <div class="icon-back" ng-click="$navigation.go('/home')"
+         style="position: absolute;margin-left: 30px;margin-top: 10px;"></div>
     <div class="font-xl text-center space l top">Projects</div>
 
-    <div class="projects-list">
-        <div class="project-item font-s" ng-repeat="project in projects" ng-style="{ background: project.color }">{{project.name}}</div>
+    <div class="projects-list space xl top">
+        <div ng-repeat-start="project in projects" class="project-item font-s" ng-style="{ background: project.color }" ng-mouseenter="mouseEnter= true">
+            {{project.name}}
+            <div class="description text-space m left right top">
+                {{project.description}}
+            </div>
+            <div class="nav-bar text-space s left right close" ng-class="{open: mouseEnter }">
+                <a class="icon-git demo-link space s top pull-left" href="{{project.githubUrl}}" target="_blank"></a>
+
+                <a class="demo-link pull-right" href="{{project.githubPageUrl}}" target="_blank">Demo</a>
+            </div>
+        </div>
+        <br ng-repeat-end="" class="line-break"/>
     </div>
 </div>
