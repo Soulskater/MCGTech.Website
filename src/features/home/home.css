@@ -34,3 +34,15 @@
     border-right: none;
   }
 }
+.icon-computer {
+  display: inline-block;
+  background: url("../../images/computer-48X48.png") no-repeat;
+  width: 48px;
+  height: 48px;
+}
+.icon-blog {
+  display: inline-block;
+  background: url("../../images/blog.png") no-repeat;
+  width: 64px;
+  height: 64px;
+}

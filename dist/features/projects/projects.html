@@ -4,12 +4,12 @@
     <div class="font-xl text-center space l top">Projects</div>
 
     <div class="projects-list space xl top">
-        <div ng-repeat-start="project in projects" class="project-item font-s" ng-style="{ background: project.color }" ng-mouseenter="mouseEnter= true">
+        <div ng-repeat-start="project in projects" class="project-item font-s" ng-style="{ background: project.color }">
             {{project.name}}
             <div class="description text-space m left right top">
                 {{project.description}}
             </div>
-            <div class="nav-bar text-space s left right close" ng-class="{open: mouseEnter }">
+            <div class="nav-bar text-space s left right close">
                 <a class="icon-git demo-link space s top pull-left" href="{{project.githubUrl}}" target="_blank"></a>
 
                 <a class="demo-link pull-right" href="{{project.githubPageUrl}}" target="_blank">Demo</a>
