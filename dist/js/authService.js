@@ -4,8 +4,8 @@
 angular.module("MCGTech")
     .service('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
 
-        //var serviceBase = "http://localhost:49994/";
-        var serviceBase = 'http://service.mcgtech.net/';
+        var serviceBase = "http://localhost:49994/";
+        //var serviceBase = 'http://service.mcgtech.net/';
         var authServiceFactory = {};
 
         var _authentication = {
