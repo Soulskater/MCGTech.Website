@@ -4,15 +4,15 @@
     <div class="font-xl text-center space l top">Blog</div>
 
     <div class="blog-list space xl top">
-        <div ng-repeat-start="project in blog" class="project-item font-s" ng-style="{ background: project.color }">
-            {{project.name}}
-            <div class="description text-space m left right top">
-                {{project.description}}
-            </div>
-            <div class="nav-bar text-space s left right close">
-                <a class="icon-git demo-link space s top pull-left" href="{{project.githubUrl}}" target="_blank"></a>
-
-                <a class="demo-link pull-right" href="{{project.githubPageUrl}}" target="_blank">Demo</a>
+        <div ng-repeat-start="entryGroup in blogEntryGroups" class="blog-entry-group font-s">
+            <div ng-repeat="entry in entryGroup" class="blog-entry"
+                 ng-style="{ top:(-5*(entry.length - $index)), right:(-5*(entry.length - $index))}">
+                <div class="space top m">
+                    {{entry.title}}
+                </div>
+                <div class="created">
+                    {{entry.created.format('L')}}
+                </div>
             </div>
         </div>
         <br ng-repeat-end="" class="line-break"/>
