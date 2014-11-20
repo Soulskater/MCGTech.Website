@@ -86,7 +86,8 @@ body a:active {
   left: 0;
   right: 0;
   bottom: 100px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .view-animation.ng-enter,
 .view-animation.ng-leave {

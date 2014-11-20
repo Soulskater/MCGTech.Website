@@ -13,6 +13,10 @@ angular.module("MCGTech")
                     templateUrl: 'features/blog/blog.html',
                     controller: 'BlogCtrl'
                 }).
+                when('/blog/entry', {
+                    templateUrl: 'features/blog/blogEntry.html',
+                    controller: 'BlogEntryCtrl'
+                }).
                 when('/about', {
                     templateUrl: 'features/about/about.html',
                     controller: 'AboutCtrl'

@@ -4,9 +4,10 @@
     <div class="font-xl text-center space l top">Blog</div>
 
     <div class="blog-list space xl top">
-        <div ng-repeat-start="entryGroup in blogEntryGroups" class="blog-entry-group font-s">
+        <div ng-repeat-start="entryGroup in blogEntryGroups" class="blog-entry-group font-s"
+             ng-click="selectGroup(entryGroup)" ng-style="{ opacity: !entryGroup.selected && hasSelected ? 0.5 : 1 }">
             <div ng-repeat="entry in entryGroup" class="blog-entry"
-                 ng-style="{ top:(-5*(entry.length - $index)), right:(-5*(entry.length - $index))}">
+                 ng-style="setBlogEntryStyle(entry, $index, entryGroup)" ng-click="showBlogEntry(entry, entryGroup)">
                 <div class="space top m">
                     {{entry.title}}
                 </div>
