@@ -51,9 +51,7 @@ body {
 .header {
     height: 30px;
     line-height: 30px;
-    background: @blue;
-    color: @white;
-    border-bottom: 1px solid @light-blue;
+    //border-bottom: 1px solid @light-blue;
     .user-info {
         line-height: 20px;
         position: absolute;
@@ -67,9 +65,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100px;
     text-align: center;
-    background: @blue;
+    /*border-top: 1px solid rgb(255, 255, 255, 0.87);*/
+    margin-left: auto;
+    margin-right: auto;
+    .frame {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid rgb(255, 255, 255, 0.87);
+        border-radius: 20px;
+        display: inline-block;
+    }
 }
 
 .icon {
@@ -113,13 +120,13 @@ body {
 }
 
 .view-animation.ng-enter {
-    -webkit-animation: 0.3s view-animation-enter;
-    animation: 0.3s view-animation-enter;
+    -webkit-animation: 0.5s view-animation-enter;
+    animation: 0.5s view-animation-enter;
 }
 
 .view-animation.ng-leave {
-    -webkit-animation: 0.3s view-animation-leave;
-    animation: 0.3s view-animation-leave;
+    -webkit-animation: 0.5s view-animation-leave;
+    animation: 0.5s view-animation-leave;
 }
 
 @keyframes view-animation-enter {
