@@ -368,7 +368,7 @@
 }
 body {
   margin: 0;
-  background: #E2E2E2;
+  -webkit-overflow-scrolling: touch;
   color: #000000;
   /* visited link */
   /* mouse over link */
