@@ -20,7 +20,6 @@
 
         .blog-entry {
             color: @white;
-            background: #7B8C94;
             border: 1px solid #676767;
             position: absolute;
             width: 100%;
@@ -42,14 +41,35 @@
     }
 }
 
+/*Blog Entry*/
+
 .blog-content{
-    background: #c4c4c4;
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
     max-width: 800px;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
+}
+
+.comment-wrapper{
+    padding: 10px;
+
+    .comment-area{
+        width: 100%;
+        border: none;
+        height: 200px;
+        padding: 0;
+        resize: none;
+        background: inherit;
+    }
+}
+
+.button{
+    border: none;
+    cursor: pointer;
+    &.post{
+        width: 80px;
+        height: 30px;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -58,4 +78,16 @@
             display: inline-block;
         }
     }
+}
+
+div {
+    opacity: 1;
+}
+div.ng-enter {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    opacity: 0;
+}
+div.ng-enter-active {
+    opacity: 1;
 }

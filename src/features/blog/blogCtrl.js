@@ -3,48 +3,47 @@
  */
 angular.module("MCGTech")
     .controller("BlogCtrl", ["$scope", "navigationService", "blogService", function ($scope, $navigation, $apiService) {
-        $scope.blogEntryGroups = [];
+        $scope.blogPostGroups = [];
 
         _init();
         function _init() {
-            $apiService.getBlogEntries().then(function (entries) {
-                $scope.blogEntryGroups = linq(entries).groupBy(function (entry) {
-                    entry.created = moment(entry.created);
-                    return [entry.created.format('MM')];
+            $apiService.getBlogPosts().then(function (posts) {
+                $scope.blogPostGroups = linq(posts).groupBy(function (post) {
+                    post.created = moment(post.created);
+                    return [post.created.format('MM')];
                 }).get();
             });
         }
 
-        $scope.hasSelected = null;
+        $scope.hasSelected = function () {
+            return linq($scope.blogPostGroups).any(function (postGroup) {
+                return postGroup.selected;
+            });
+        };
 
         $scope.$navigation = $navigation;
 
-        $scope.selectedEntry = null;
-
-        $scope.selectGroup= function (group) {
-            $scope.hasSelected = true;
-            linq($scope.blogEntryGroups).forEach(function (entryGroup) {
-               entryGroup.selected = false;
+        $scope.selectGroup = function (group) {
+            linq($scope.blogPostGroups).forEach(function (postGroup) {
+                postGroup.selected = false;
             });
             group.selected = true;
         };
 
-        $scope.setBlogEntryStyle = function (entry, $index, group) {
+        $scope.blogPostTileStyle = function ($index, group) {
             return {
-                top: !group.selected ? (-5*(group.length - $index)) : 0,
-                right: !group.selected ? (-5*(group.length - $index)) : 0,
+                top: !group.selected ? (-5 * (group.length - $index)) : 0,
+                right: !group.selected ? (-5 * (group.length - $index)) : 0,
                 'z-index': group.selected ? 10 : 0,
-                transform: group.selected ? "translate("+ (-160 + ($index * 160)) +"px, 100px)":""
+                transform: group.selected ? "translate(" + (-160 + ($index * 160)) + "px, 100px)" : ""
             };
         };
 
-
-        $scope.showBlogEntry= function (entry, group) {
-            if(!group.selected){
+        $scope.showBlogPost = function (post, group) {
+            if (!group.selected) {
                 return;
             }
-            $apiService.data.selectedEntry = entry;
-            $navigation.go("/blog/entry");
+            $navigation.go("/blog/post/" + post.blogId);
         };
     }]);
 

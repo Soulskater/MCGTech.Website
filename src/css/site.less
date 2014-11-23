@@ -69,14 +69,22 @@ body {
     /*border-top: 1px solid rgb(255, 255, 255, 0.87);*/
     margin-left: auto;
     margin-right: auto;
-    .frame {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        border: 1px solid rgb(255, 255, 255, 0.87);
-        border-radius: 20px;
-        display: inline-block;
-    }
+}
+
+.frame {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgb(255, 255, 255, 0.87);
+    border-radius: 20px;
+    display: inline-block;
+}
+.frame-s{
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    display: inline-block;
 }
 
 .icon {
@@ -98,6 +106,18 @@ body {
         background: url("../images/loading_48X51.GIF") no-repeat;
         width: 48px;
         height: 51px;
+    }
+    &-loading80 {
+        display: inline-block;
+        background: url("../images/loading_80.GIF") no-repeat;
+        width: 80px;
+        height: 80px;
+    }
+    &-loading128 {
+        display: inline-block;
+        background: url("../images/loading_128.GIF") no-repeat;
+        width: 128px;
+        height: 128px;
     }
 }
 
@@ -217,5 +237,58 @@ body {
         &:hover {
             background: #C7C7C7;
         }
+    }
+}
+
+.icon-xs{
+    font-size: 0.7em;
+    padding: 3px;
+    vertical-align: 5%;
+    text-rendering: auto;
+}
+
+.icon-s{
+    font-size: 1.33333333em;
+    vertical-align: -15%;
+    text-rendering: auto;
+}
+
+.icon-m {
+    font-size: 40px;
+    text-rendering: auto;
+    display: block;
+}
+
+.icon-l {
+    font-size: 80px;
+    text-rendering: auto;
+    display: block;
+}
+
+@media (max-height: 600px) {
+    .view-container {
+        bottom: 42px;
+    }
+
+    .frame {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        display: inline-block;
+    }
+    .collapse-on-small{
+        display: none;
+    }
+    .icon-m {
+        font-size: 20px;
+        text-rendering: auto;
+        display: block;
+    }
+
+    .icon-l {
+        font-size: 40px;
+        text-rendering: auto;
+        display: block;
     }
 }

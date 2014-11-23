@@ -18,18 +18,26 @@
     <meta content="IE=edge,chrome=1" name="X-UA-Compatible">
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
 
-    <link rel="stylesheet" href="../packages/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../packages/general-icons/styles.css">
+    <link type="text/css" rel="stylesheet" href="../packages/codehighlight/css/shCore.css">
+    <link type="text/css" rel="Stylesheet" href="../packages/codehighlight/css/shThemeDefault.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/site.colors.css">
     <link rel="stylesheet" href="css/site.css">
 
     <script type="text/javascript" src="../packages/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../packages/angular/angular.js"></script>
+    <script type="text/javascript" src="../packages/angular-sanitize/angular-sanitize.js"></script>
     <script type="text/javascript" src="../packages/angular-local-storage/dist/angular-local-storage.js"></script>
     <script type="text/javascript" src="../packages/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="../packages/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="../packages/linq-js/dist/linq.js"></script>
     <script type="text/javascript" src="../packages/moment/moment.js"></script>
+    <script type="text/javascript" src="../packages/codehighlight/shCore.js"></script>
+    <script type="text/javascript" src="../packages/codehighlight/shLegacy.js"></script>
+    <script type="text/javascript" src="../packages/codehighlight/shAutoloader.js"></script>
+    <script type="text/javascript" src="../packages/codehighlight/shBrushJScript.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
 
     <script type="text/javascript" src="js/modules.js"></script>
     <script type="text/javascript" src="js/routeConfig.js"></script>
@@ -49,12 +57,12 @@
     <!--Header-->
     <div class="header blue-grey-800 text-space m all">
         <span class="font-l space xl right"><a href="#/home">Tech R&D</a></span>
-        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/loginnn">Login</a>, or <a
+        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/login">Login</a>, or <a
                 href="#/signup">Sign up</a></span>
 
         <div ng-if="authService.user.isAuthenticated" class="font-s user-info text-right">
-            <div>{{userProfile.firstName}}</div>
-            <div>{{userProfile.lastName}}
+            <div>{{authService.userProfile.firstName}}</div>
+            <div>{{authService.userProfile.lastName}}
                 <dropdown>
                     <dropdown-item class="font-s" ng-click="logOut()">Logout</dropdown-item>
                 </dropdown>
@@ -70,24 +78,24 @@
         </div>
     </div>
     <!--/ContentView-->
-    <div class="footer blue-grey-800 text-space s top">
-        <div class="font-xs space m bottom">
+    <div class="footer blue-grey-800 text-space s top bottom">
+        <div class="font-xs space m bottom collapse-on-small">
             Follow me on
         </div>
 
-        <a class="frame space s right" href="https://twitter.com/gmeszaros007">
-            <i class="fa fa-twitter fa-lg "></i>
+        <a class="frame space s right" href="https://twitter.com/gmeszaros007" target="_blank">
+            <i class="icon-s icon-twitter"></i>
         </a>
-        <a class="frame space s right" href="https://www.facebook.com/gabor.meszaros.37604">
-            <i class="fa fa-facebook fa-lg "></i>
+        <a class="frame space s right" href="https://www.facebook.com/gabor.meszaros.37604" target="_blank">
+            <i class="icon-s icon-facebook"></i>
         </a>
-        <a class="frame space s right" href="https://www.linkedin.com/profile/view?id=115183260">
-            <i class="fa fa-linkedin fa-lg "></i>
+        <a class="frame space s right" href="https://www.linkedin.com/profile/view?id=115183260" target="_blank">
+            <i class="icon-s icon-linkedin"></i>
         </a>
-        <a class="frame" href="https://github.com/Soulskater/">
-            <i class="fa fa-github fa-lg "></i>
+        <a class="frame" href="https://github.com/Soulskater/" target="_blank">
+            <i class="icon-s icon-fontawesome-webfont"></i>
         </a>
-        <div class="font-xs space s top bottom">
+        <div class="font-xs space s top bottom collapse-on-small">
             2014 Gábor Mészáros
         </div>
     </div>

@@ -4,8 +4,8 @@
 angular.module("MCGTech")
     .service('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
 
-        //var serviceBase = "http://localhost:49994/";
-        var serviceBase = 'http://service.mcgtech.net/';
+        var serviceBase = "http://localhost:49994/";
+        //var serviceBase = 'http://service.mcgtech.net/';
         var authServiceFactory = {};
 
         var _authentication = {
@@ -63,6 +63,7 @@ angular.module("MCGTech")
             if (authData) {
                 _authentication.isAuthenticated = true;
                 _authentication.userName = authData.userName;
+                _getUserProfile();
             }
 
         };
@@ -75,6 +76,8 @@ angular.module("MCGTech")
             }
             $http.get(serviceBase + 'api/account/user')
                 .success(function (response) {
+                    _userProfile.firstName = response.firstName;
+                    _userProfile.lastName = response.lastName;
                     defer.resolve(response);
                 }).error(function (ex) {
                     defer.reject(ex);
@@ -85,6 +88,7 @@ angular.module("MCGTech")
         authServiceFactory.login = _login;
         authServiceFactory.logOut = _logOut;
         authServiceFactory.getUserProfile = _getUserProfile;
+        authServiceFactory.userProfile = _userProfile;
         authServiceFactory.fillAuthData = _fillAuthData;
         authServiceFactory.user = _authentication;
 

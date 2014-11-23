@@ -9,7 +9,6 @@ angular.module("MCGTech")
             { name: "About", url: "#/about"}
         ];
 
-        $scope.userProfile = {};
         $scope.authService = authService;
         $scope.$navigation = $navigation;
         $scope.logOut = function () {
@@ -20,8 +19,5 @@ angular.module("MCGTech")
         _init();
         function _init() {
             authService.fillAuthData();
-            authService.getUserProfile().then(function (user) {
-                $scope.userProfile = user;
-            });
         }
     }]);

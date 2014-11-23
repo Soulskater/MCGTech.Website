@@ -13,8 +13,8 @@ angular.module("MCGTech")
                     templateUrl: 'features/blog/blog.html',
                     controller: 'BlogCtrl'
                 }).
-                when('/blog/entry', {
-                    templateUrl: 'features/blog/blogEntry.html',
+                when('/blog/post/:postId', {
+                    templateUrl: 'features/blog/blogPost.html',
                     controller: 'BlogEntryCtrl'
                 }).
                 when('/about', {
@@ -25,7 +25,7 @@ angular.module("MCGTech")
                     templateUrl: 'features/home/home.html',
                     controller: 'HomeCtrl'
                 }).
-                when("/loginnn", {
+                when("/login", {
                     templateUrl: "features/account/login/login.html",
                     controller: "LoginCtrl"
                 }).
