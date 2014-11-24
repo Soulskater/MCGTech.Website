@@ -37,8 +37,7 @@ angular.module("MCGTech")
 
                 localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
 
-                _authentication.isAuthenticated = true;
-                _authentication.userName = loginData.userName;
+                _fillAuthData();
                 deferred.resolve(response);
             }).error(function (err, status) {
                 _logOut();
@@ -80,6 +79,7 @@ angular.module("MCGTech")
                     _userProfile.lastName = response.lastName;
                     defer.resolve(response);
                 }).error(function (ex) {
+                    _logOut();
                     defer.reject(ex);
                 });
             return defer.promise;

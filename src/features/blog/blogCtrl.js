@@ -40,7 +40,7 @@ angular.module("MCGTech")
         };
 
         $scope.showBlogPost = function (post, group) {
-            if (!group.selected) {
+            if (!group.selected && group.length > 1) {
                 return;
             }
             $navigation.go("/blog/post/" + post.blogId);
