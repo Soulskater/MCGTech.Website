@@ -3,7 +3,7 @@
  */
 angular.module("MCGTech")
     .service("projectsService", ["$q", "$http", function ($q, $http) {
-        var baseUrl = "http://mcgtechservice.azurewebsites.net/";
+        var baseUrl = "http://service.mcgtech.net/";
 
         return {
             getProjects: function () {
