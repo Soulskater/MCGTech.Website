@@ -10,8 +10,9 @@ angular.module("MCGTech")
             $apiService.getBlogPosts().then(function (posts) {
                 $scope.blogPostGroups = linq(posts).groupBy(function (post) {
                     post.created = moment(post.created);
-                    return [post.created.format('MM')];
+                    return [post.created.format('YYYY')];
                 }).get();
+                $scope.loading = false;
             });
         }
 
@@ -21,6 +22,7 @@ angular.module("MCGTech")
             });
         };
 
+        $scope.loading = true;
         $scope.$navigation = $navigation;
 
         $scope.selectGroup = function (group) {
@@ -40,9 +42,6 @@ angular.module("MCGTech")
         };
 
         $scope.showBlogPost = function (post, group) {
-            if (!group.selected && group.length > 1) {
-                return;
-            }
             $navigation.go("/blog/post/" + post.blogId);
         };
     }]);

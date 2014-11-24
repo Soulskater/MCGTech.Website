@@ -24,6 +24,14 @@
   font-size: 2.5rem;
 }
 @media (max-height: 600px) {
+  .font-xs {
+    font-family: metro-font;
+    font-size: 13px;
+  }
+  .font-s {
+    font-family: metro-font;
+    font-size: 15px;
+  }
   .font-m {
     font-family: metro-font;
     font-size: 1.1rem;

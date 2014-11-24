@@ -2,17 +2,20 @@
     <div class="icon-back" ng-click="$navigation.go('/home')"
          style="position: absolute;margin-left: 30px;margin-top: 10px;"></div>
     <div class="font-l text-center space l top">Blog</div>
+    <div ng-if="loading" class="text-center space xl top">
+        <span class="icon-loading80"></span>
+    </div>
 
-    <div class="blog-list space xl top">
-        <div ng-repeat-start="postGroup in blogPostGroups" class="blog-entry-group font-s" element-leave="postGroup.selected"
+    <div ng-if="!loading" class="blog-list space xl top">
+        <div style="background: rgba(213, 237, 255, 0.1);" ng-repeat-start="postGroup in blogPostGroups"
+             class="blog-entry-group space m top font-s" element-leave="postGroup.selected"
              ng-click="selectGroup(postGroup)" ng-style="{ opacity: !postGroup.selected && hasSelected() ? 0.5 : 1 }">
+            <div class="font-m">{{postGroup[0].created.format("YYYY")}}</div>
             <div ng-repeat="post in postGroup" class="blog-entry light-blue-a700"
-                 ng-style="blogPostTileStyle($index, postGroup)" ng-click="showBlogPost(post, postGroup)">
-                <div class="space top m">
-                    {{post.title}}
-                </div>
+                 ng-click="showBlogPost(post, postGroup)">
+                {{post.title}}
                 <div class="created">
-                    {{post.created.format('L')}}
+                    {{post.created.format("DD MMMM YYYY")}}
                 </div>
             </div>
         </div>
