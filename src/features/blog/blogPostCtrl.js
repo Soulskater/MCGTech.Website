@@ -28,6 +28,12 @@ angular.module("MCGTech")
         $scope.blogPost;
         $scope.newComment = "";
 
+        $scope.hasRating = function () {
+            return linq($scope.blogPost.ratings).firstOrDefault(function (rate) {
+                return rate.userId === $authService.user.userName;
+            }) !== null;
+        };
+
         $scope.postComment = function () {
             if ($scope.newComment === "") {
                 return;
@@ -39,6 +45,10 @@ angular.module("MCGTech")
             });
             $apiService.saveBlogComment($scope.blogPost.blogId, $scope.newComment);
             $scope.newComment = "";
+        };
+
+        $scope.sendRating = function (rating) {
+            $apiService.rateBlog($scope.blogPost.blogId, rating);
         };
     }]);
 

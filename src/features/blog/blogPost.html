@@ -13,10 +13,19 @@
             <div class="font-s" ng-bind-html="blogPost.content">
 
             </div>
-            <div ng-if="blogPost.comments.length > 0" class="font-m space xl top">
+            <!--Ratings-->
+            <div class="space xl top" ng-if="$authService.user.isAuthenticated && !hasRating()">
+                <div class="font-m space s bottom">
+                    Rate the post
+                </div>
+                <ratings rating-changed="sendRating(rating)">
+                </ratings>
+            </div>
+            <!--Comments-->
+            <div ng-if="blogPost.comments.length > 0" class="font-m space m top">
                 Comments
             </div>
-            <div ng-if="blogPost.comments.length == 0" class="font-m space xl top">
+            <div ng-if="blogPost.comments.length == 0" class="font-m space m top">
                 No comments
             </div>
             <div class="space m all" style="border-bottom: 1px solid rgba(255,255,255, 0.3); overflow: hidden"
