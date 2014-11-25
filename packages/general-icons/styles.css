@@ -74,3 +74,9 @@
 .icon-plus:before {
   content: "m";
 }
+.icon-qq:before {
+  content: "g";
+}
+.icon-star:before {
+  content: "n";
+}

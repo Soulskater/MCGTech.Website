@@ -3,8 +3,8 @@
  */
 angular.module("MCGTech")
     .service("blogService", ["$q", "$http", function ($q, $http) {
-        var baseUrl = "http://service.mcgtech.net/";
-        //var baseUrl = "http://localhost:49994/";
+        //var baseUrl = "http://service.mcgtech.net/";
+        var baseUrl = "http://localhost:49994/";
 
         var blogPosts;
         return {
@@ -53,7 +53,18 @@ angular.module("MCGTech")
                     defer.reject(ex);
                 });
                 return defer.promise;
+            },
+            rateBlog: function (blogId, value) {
+                var defer = $q.defer();
+                $http.post(baseUrl + "api/blog/rate", {
+                    blogId: blogId,
+                    value: value
+                }).success(function () {
+                    defer.resolve();
+                }).error(function (ex) {
+                    defer.reject(ex);
+                });
+                return defer.promise;
             }
-
         };
     }]);

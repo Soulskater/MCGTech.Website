@@ -4,7 +4,7 @@
     <div class="font-l text-center space l top">Projects</div>
 
     <div class="projects-list space xl top">
-        <div ng-repeat-start="project in projects" class="project-item font-s" ng-style="{ background: project.color }">
+        <div ng-repeat-start="project in projects" class="project-item font-s" ng-click="openGitDemoPage(project.githubPageUrl)" ng-style="{ background: project.color }">
             {{project.name}}
             <div class="description text-space m left right top">
                 {{project.description}}

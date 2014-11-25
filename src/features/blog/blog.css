@@ -429,7 +429,6 @@
   color: #ffffff;
   border: 1px solid #676767;
   position: relative;
-  padding: 5px;
   width: 180px;
   height: 140px;
   -webkit-transition: -webkit-transform 1s;
@@ -437,7 +436,7 @@
   transition: transform 1s;
   display: inline-block;
   vertical-align: top;
-  margin: 5px;
+  cursor: pointer;
 }
 .blog-list .blog-entry-group .blog-entry .created {
   position: absolute;

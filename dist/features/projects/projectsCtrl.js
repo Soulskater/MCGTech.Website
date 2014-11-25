@@ -14,4 +14,8 @@ angular.module("MCGTech")
         }
 
         $scope.$navigation = $navigation;
+
+        $scope.openGitDemoPage= function (url) {
+            window.open(url, '_blank');
+        };
     }]);
