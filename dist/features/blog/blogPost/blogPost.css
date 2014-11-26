@@ -1,0 +1,25 @@
+.blog-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  text-align: left;
+}
+.comment-wrapper {
+  padding: 10px;
+}
+.comment-wrapper .comment-area {
+  width: 100%;
+  border: none;
+  height: 200px;
+  padding: 0;
+  resize: none;
+  background: inherit;
+}
+.button {
+  border: none;
+  cursor: pointer;
+}
+.button.post {
+  width: 80px;
+  height: 30px;
+}

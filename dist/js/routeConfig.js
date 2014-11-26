@@ -10,11 +10,11 @@ angular.module("MCGTech")
                     controller: 'ProjectsCtrl'
                 }).
                 when('/blog', {
-                    templateUrl: 'features/blog/blog.html',
+                    templateUrl: 'features/blog/blogList/blog.html',
                     controller: 'BlogCtrl'
                 }).
                 when('/blog/post/:postId', {
-                    templateUrl: 'features/blog/blogPost.html',
+                    templateUrl: 'features/blog/blogPost/blogPost.html',
                     controller: 'BlogEntryCtrl'
                 }).
                 when('/about', {
