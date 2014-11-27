@@ -27,8 +27,8 @@
       <file leaf-file-name="blog.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="527">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="527">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -49,8 +49,8 @@
       <file leaf-file-name="activityChart.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/blog/activityChart/activityChart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="0" column="86" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="86" />
+            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#highchart#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -58,26 +58,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activityChartCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activityChartCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/features/blog/activityChart/activityChartCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1309">
-              <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.23734729" vertical-offset="408" max-vertical-offset="1428">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
-                <marker date="1417038397720" expanded="true" signature="908:922" placeholder="..." />
-                <marker date="1417038397720" expanded="true" signature="1001:1031" placeholder="..." />
-                <marker date="1417038397720" expanded="true" signature="1084:1093" placeholder="..." />
+                <marker date="1417127657135" expanded="true" signature="1529:1543" placeholder="..." />
+                <marker date="1417127657135" expanded="true" signature="1622:1652" placeholder="..." />
+                <marker date="1417127657135" expanded="true" signature="1705:1714" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overallRating.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/blog/overallRating/overallRating.html">
+      <file leaf-file-name="blog.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blog.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="102" max-vertical-offset="1258">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -86,21 +86,9 @@
       <file leaf-file-name="blogService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/blog/blogService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1275">
               <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="overallRatingCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/blog/overallRating/overallRatingCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -108,10 +96,9 @@
       <file leaf-file-name="blogPostCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/features/blog/blogPost/blogPostCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <caret line="38" column="10" selection-start-line="32" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="799">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
-                <element signature="e#296#967#0" expanded="false" />
                 <element signature="e#1219#1451#0" expanded="false" />
                 <element signature="e#1493#1686#0" expanded="false" />
                 <element signature="e#1730#2139#0" expanded="false" />
@@ -121,21 +108,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="blogCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blogCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="57" />
+              <folding>
+                <element signature="e#660#804#0" expanded="false" />
+                <element signature="e#927#1104#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="site.colors.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/site.colors.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="96.46154" vertical-offset="4735" max-vertical-offset="7718">
-              <caret line="131" column="27" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="27" />
+            <state vertical-scroll-proportion="-37.923077" vertical-offset="1785" max-vertical-offset="8738">
+              <caret line="163" column="27" selection-start-line="163" selection-start-column="27" selection-end-line="163" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="authService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/authService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20767888" vertical-offset="0" max-vertical-offset="1581">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1581">
+              <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
               <folding>
                 <element signature="e#588#783#0" expanded="false" />
               </folding>
@@ -157,7 +157,6 @@
         <option value="$PROJECT_DIR$/dist/features/projects/projects.html" />
         <option value="$PROJECT_DIR$/src/features/account/register/register.html" />
         <option value="$PROJECT_DIR$/packages/codehighlight/css/shCore.css" />
-        <option value="$PROJECT_DIR$/src/css/site.colors.less" />
         <option value="$PROJECT_DIR$/src/features/blog/blogEntry.html" />
         <option value="$PROJECT_DIR$/src/features/blog/blogEntryCtrl.js" />
         <option value="$PROJECT_DIR$/src/js/masterPageCtrl.js" />
@@ -180,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/features/blog/blog.less" />
         <option value="$PROJECT_DIR$/src/features/blog/blogPost/blogPost.less" />
         <option value="$PROJECT_DIR$/src/js/routeConfig.js" />
-        <option value="$PROJECT_DIR$/src/features/blog/blogList/blog.less" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/js/modules.js" />
         <option value="$PROJECT_DIR$/src/features/blog/activityGraph/activityGraph.html" />
@@ -188,9 +186,13 @@
         <option value="$PROJECT_DIR$/src/features/blog/overallRating/overallRating.html" />
         <option value="$PROJECT_DIR$/src/features/blog/overallRating/overallRatingCtrl.js" />
         <option value="$PROJECT_DIR$/src/features/blog/blogList/dynamicTileDirective.js" />
-        <option value="$PROJECT_DIR$/src/features/blog/blogList/blog.html" />
         <option value="$PROJECT_DIR$/src/features/blog/blogService.js" />
         <option value="$PROJECT_DIR$/src/js/authService.js" />
+        <option value="$PROJECT_DIR$/src/features/blog/activityChart/activityChart.html" />
+        <option value="$PROJECT_DIR$/src/features/blog/blogList/blog.less" />
+        <option value="$PROJECT_DIR$/src/css/site.colors.less" />
+        <option value="$PROJECT_DIR$/src/features/blog/blogList/blog.html" />
+        <option value="$PROJECT_DIR$/src/features/blog/activityChart/activityChartCtrl.js" />
       </list>
     </option>
   </component>
@@ -545,14 +547,10 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Debug">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -560,6 +558,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -641,28 +643,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264865" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3654054" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26054054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264865" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17966281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26054054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35027027" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264865" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3654054" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -681,9 +683,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41323212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38054055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -876,7 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58198196" vertical-offset="0" max-vertical-offset="918">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="476">
           <caret line="12" column="73" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,9 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5283364" vertical-offset="0" max-vertical-offset="1054">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="816">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,19 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blog.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3076925" vertical-offset="643" max-vertical-offset="1258">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/highcharts.com/bower-info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,9 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,7 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -993,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56766254" vertical-offset="629" max-vertical-offset="2210">
           <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,53 +990,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
           <caret line="3" column="127" selection-start-line="3" selection-start-column="127" selection-end-line="3" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blogCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="4" column="120" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="120" />
-          <folding>
-            <element signature="e#660#804#0" expanded="false" />
-            <element signature="e#927#1104#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/blog/blogPost/blogPostCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="38" column="10" selection-start-line="32" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="e#296#967#0" expanded="false" />
-            <element signature="e#1219#1451#0" expanded="false" />
-            <element signature="e#1493#1686#0" expanded="false" />
-            <element signature="e#1730#2139#0" expanded="false" />
-            <element signature="e#2188#2353#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/features/blog/overallRating/overallRating.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/blog/activityChart/activityChartCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1309">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-            <marker date="1417038397720" expanded="true" signature="908:922" placeholder="..." />
-            <marker date="1417038397720" expanded="true" signature="1001:1031" placeholder="..." />
-            <marker date="1417038397720" expanded="true" signature="1084:1093" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,29 +1021,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/site.colors.less">
+    <entry file="file://$PROJECT_DIR$/src/js/authService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="96.46154" vertical-offset="4735" max-vertical-offset="7718">
-          <caret line="131" column="27" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/blog/activityChart/activityChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="0" column="86" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1581">
+          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
           <folding>
-            <element signature="n#style#0;n#highchart#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#588#783#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="527">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,12 +1039,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/authService.js">
+    <entry file="file://$PROJECT_DIR$/src/features/blog/blogPost/blogPostCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20767888" vertical-offset="0" max-vertical-offset="1581">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="799">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
-            <element signature="e#588#783#0" expanded="false" />
+            <element signature="e#1219#1451#0" expanded="false" />
+            <element signature="e#1493#1686#0" expanded="false" />
+            <element signature="e#1730#2139#0" expanded="false" />
+            <element signature="e#2188#2353#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blogCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="e#660#804#0" expanded="false" />
+            <element signature="e#927#1104#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/blog/activityChart/activityChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#highchart#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blog.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="102" max-vertical-offset="1258">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/site.colors.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-37.923077" vertical-offset="1785" max-vertical-offset="8738">
+          <caret line="163" column="27" selection-start-line="163" selection-start-column="27" selection-end-line="163" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/blog/blogList/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="527">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/features/blog/activityChart/activityChartCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23734729" vertical-offset="408" max-vertical-offset="1428">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <marker date="1417127657135" expanded="true" signature="1529:1543" placeholder="..." />
+            <marker date="1417127657135" expanded="true" signature="1622:1652" placeholder="..." />
+            <marker date="1417127657135" expanded="true" signature="1705:1714" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -11,7 +11,7 @@
              class="blog-entry-group space m top font-s" element-leave="postGroup.selected"
              ng-click="selectGroup(postGroup)" ng-style="{ opacity: !postGroup.selected && hasSelected() ? 0.5 : 1 }">
             <div class="font-m">{{postGroup[0].created.format("YYYY")}}</div>
-            <div ng-repeat="post in postGroup" class="blog-entry space s all text-space s all blue-grey-500"
+            <div ng-repeat="post in postGroup" class="blog-entry space s all text-space s all purple-500"
                  ng-click="showBlogPost(post, postGroup)">
                 {{post.title}}
                 <a href="blog/activityGraph"></a>

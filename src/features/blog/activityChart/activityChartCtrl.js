@@ -5,6 +5,19 @@ angular.module("MCGTech")
     .controller("ActivityChart", ["$scope", "navigationService", "blogService", function ($scope, $navigation, $apiService) {
         $scope.init = function (blogPost) {
             $scope.blogPost = blogPost;
+
+            linq(blogPost.comments).groupBy(function (comment) {
+                return [moment(comment.created).format('MMM')];
+            }).forEach(function (commentGroup) {
+                if ($scope.chartConfig.xAxis.categories.length < 3) {
+                    var categoryName = moment(commentGroup[0].created).format('MMM');
+                    $scope.chartConfig.xAxis.categories.push(categoryName);
+                    $scope.chartConfig.series[0].data.push({
+                        name: categoryName,
+                        y: commentGroup.length
+                    });
+                }
+            });
         };
 
         $scope.chartConfig = {
@@ -19,7 +32,7 @@ angular.module("MCGTech")
                 },
                 plotOptions: {
                     series: {
-                        color: "#673AB7"
+                        color: "#0091EA"
                     },
                     column: {
                         borderWidth: 0
@@ -35,13 +48,7 @@ angular.module("MCGTech")
                 }
             },
             series: [{
-                data: [{
-                    name: 'Nov 14',
-                    y: 3
-                }, {
-                    name: 'Nov 23',
-                    y: 5
-                }]
+                data: []
             }],
             xAxis: {
                 title: {
@@ -52,7 +59,7 @@ angular.module("MCGTech")
                         color: '#fff'
                     }
                 },
-                categories: ["Nov 14", "Nov 23"]
+                categories: []
             },
             yAxis: {
                 title: {

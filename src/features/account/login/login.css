@@ -86,6 +86,62 @@
 .pink-900 {
   background-color: #880e4f;
 }
+.purple-50 {
+  color: rgba(0, 0, 0, 0.87);
+  background: #F3E5F5;
+}
+.purple-100 {
+  color: rgba(0, 0, 0, 0.87);
+  background: #E1BEE7;
+}
+.purple-200 {
+  color: rgba(0, 0, 0, 0.87);
+  background: #CE93D8;
+}
+.purple-300 {
+  color: #fff;
+  background: #BA68C8;
+}
+.purple-400 {
+  color: #fff;
+  background: #AB47BC;
+}
+.purple-500 {
+  color: rgba(255, 255, 255, 0.87);
+  background: #9C27B0;
+}
+.purple-600 {
+  color: rgba(255, 255, 255, 0.87);
+  background: #8E24AA;
+}
+.purple-700 {
+  color: rgba(255, 255, 255, 0.87);
+  background: #7B1FA2;
+}
+.purple-800 {
+  color: rgba(255, 255, 255, 0.87);
+  background: #6A1B9A;
+}
+.purple-900 {
+  color: rgba(255, 255, 255, 0.87);
+  background: #4A148C;
+}
+.purple-a100 {
+  background: #EA80FC;
+  color: rgba(0, 0, 0, 0.87);
+}
+.purple-a200 {
+  background: #E040FB;
+  color: #fff;
+}
+.purple-a400 {
+  background: #D500F9;
+  color: rgba(255, 255, 255, 0.87);
+}
+.purple-a700 {
+  background: #AA00FF;
+  color: rgba(255, 255, 255, 0.87);
+}
 .deep-purple-50 {
   color: rgba(0, 0, 0, 0.87);
   background: #EDE7F6;
