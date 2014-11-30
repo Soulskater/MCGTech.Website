@@ -23,6 +23,7 @@ angular.module("MCGTech")
                         url: "features/blog/overallRating/overallRating.html"
                     }
                 ];
+                $scope.activeTile = $scope.tiles[1];
                 $interval(function () {
                     if(Math.floor((Math.random() * 100) + 1) % 2 === 0) {
                         $scope.activeTile = $scope.tiles[1];

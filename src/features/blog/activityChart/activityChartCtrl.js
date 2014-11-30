@@ -9,6 +9,9 @@ angular.module("MCGTech")
             linq(blogPost.comments).groupBy(function (comment) {
                 return [moment(comment.created).format('MMM')];
             }).forEach(function (commentGroup) {
+                if(commentGroup.length > 0) {
+                    $scope.hasData = true;
+                }
                 if ($scope.chartConfig.xAxis.categories.length < 3) {
                     var categoryName = moment(commentGroup[0].created).format('MMM');
                     $scope.chartConfig.xAxis.categories.push(categoryName);
@@ -19,6 +22,8 @@ angular.module("MCGTech")
                 }
             });
         };
+
+        $scope.hasData = false;
 
         $scope.chartConfig = {
             options: {
@@ -32,7 +37,7 @@ angular.module("MCGTech")
                 },
                 plotOptions: {
                     series: {
-                        color: "#0091EA"
+                        color: "#651FFF"
                     },
                     column: {
                         borderWidth: 0
@@ -56,7 +61,7 @@ angular.module("MCGTech")
                 },
                 labels: {
                     style: {
-                        color: '#fff'
+                        color: 'rgba(255, 255, 255, 0.5)'
                     }
                 },
                 categories: []
@@ -69,7 +74,7 @@ angular.module("MCGTech")
                 labels: {
                     enabled: false,
                     style: {
-                        color: '#fff'
+                        color: 'rgba(255, 255, 255, 0.5)'
                     }
                 }
             },
