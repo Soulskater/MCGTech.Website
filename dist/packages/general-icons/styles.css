@@ -65,9 +65,6 @@
 .icon-twitter:before {
   content: "j";
 }
-.icon-user:before {
-  content: "k";
-}
 .icon-user-1:before {
   content: "l";
 }
@@ -82,4 +79,16 @@
 }
 .icon-star-2:before {
   content: "o";
+}
+.icon-lock:before {
+  content: "p";
+}
+.icon-user-2:before {
+  content: "q";
+}
+.icon-arrow-left-big:before {
+  content: "k";
+}
+.icon-arrow-left-light:before {
+  content: "r";
 }

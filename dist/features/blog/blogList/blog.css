@@ -317,12 +317,18 @@
 .blue-grey-50 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
 }
+.blue-grey-50 .inverted {
+  color: #fff;
+}
 .blue-grey-100 {
   color: rgba(0, 0, 0, 0.87);
   background: #CFD8DC;
 }
 .blue-grey-100 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
+}
+.blue-grey-100 .inverted {
+  color: #fff;
 }
 .blue-grey-200 {
   color: rgba(0, 0, 0, 0.87);
@@ -331,12 +337,18 @@
 .blue-grey-200 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
 }
+.blue-grey-200 .inverted {
+  color: #fff;
+}
 .blue-grey-300 {
   color: rgba(0, 0, 0, 0.87);
   background: #90A4AE;
 }
 .blue-grey-300 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
+}
+.blue-grey-300 .inverted {
+  color: #fff;
 }
 .blue-grey-400 {
   color: #fff;
@@ -345,12 +357,18 @@
 .blue-grey-400 .secondary-text {
   color: rgba(255, 255, 255, 0.26);
 }
+.blue-grey-400 .inverted {
+  color: rgba(0, 0, 0, 0.87);
+}
 .blue-grey-500 {
   color: #ffffff;
   background: #607D8B;
 }
 .blue-grey-500 .secondary-text {
   color: rgba(255, 255, 255, 0.4);
+}
+.blue-grey-500 .inverted {
+  color: rgba(0, 0, 0, 0.87);
 }
 .blue-grey-600 {
   color: rgba(255, 255, 255, 0.87);
@@ -359,12 +377,18 @@
 .blue-grey-600 .secondary-text {
   color: rgba(255, 255, 255, 0.4);
 }
+.blue-grey-600 .inverted {
+  color: rgba(0, 0, 0, 0.87);
+}
 .blue-grey-700 {
   color: rgba(255, 255, 255, 0.87);
   background: #455A64;
 }
 .blue-grey-700 .secondary-text {
   color: rgba(255, 255, 255, 0.4);
+}
+.blue-grey-700 .inverted {
+  color: rgba(0, 0, 0, 0.87);
 }
 .blue-grey-800 {
   color: rgba(255, 255, 255, 0.87);
@@ -373,12 +397,18 @@
 .blue-grey-800 .secondary-text {
   color: rgba(255, 255, 255, 0.5);
 }
+.blue-grey-800 .inverted {
+  color: rgba(0, 0, 0, 0.87);
+}
 .blue-grey-900 {
   color: rgba(255, 255, 255, 0.87);
   background: #263238;
 }
 .blue-grey-900 .secondary-text {
   color: rgba(255, 255, 255, 0.5);
+}
+.blue-grey-900 .inverted {
+  color: rgba(0, 0, 0, 0.87);
 }
 .blue-grey-a100 {
   background: #A7FFEB;
@@ -387,12 +417,18 @@
 .blue-grey-a100 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
 }
+.blue-grey-a100 .inverted {
+  color: #fff;
+}
 .blue-grey-a200 {
   background: #64FFDA;
   color: rgba(0, 0, 0, 0.87);
 }
 .blue-grey-a200 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
+}
+.blue-grey-a200 .inverted {
+  color: #fff;
 }
 .blue-grey-a400 {
   background: #1DE9B6;
@@ -401,12 +437,18 @@
 .blue-grey-a400 .secondary-text {
   color: rgba(0, 0, 0, 0.3);
 }
+.blue-grey-a400 .inverted {
+  color: #fff;
+}
 .blue-grey-a700 {
   background: #00BFA5;
   color: #fff;
 }
 .blue-grey-a700 .secondary-text {
   color: rgba(255, 255, 255, 0.26);
+}
+.blue-grey-a700 .inverted {
+  color: rgba(0, 0, 0, 0.87);
 }
 .green-50 {
   color: rgba(0, 0, 0, 0.87);
@@ -509,18 +551,18 @@
     display: inline-block;
   }
 }
-div {
+div .fading {
   opacity: 1;
 }
-div.ng-enter {
+div .fading .ng-enter {
   -webkit-transition: 1.5s;
   transition: 1.5s;
   opacity: 0;
 }
-div.ng-enter-active {
+div .fading .ng-enter-active {
   opacity: 1;
 }
-div.ng-leave {
+div .fading .ng-leave {
   -webkit-transition: 1.5s;
   transition: 1.5s;
   opacity: 0;

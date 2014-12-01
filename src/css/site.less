@@ -26,6 +26,29 @@ body {
     }
 }
 
+.blue-link{
+    a:link {
+        cursor: pointer;
+        text-decoration: none;
+        color: #5AA4F9;
+    }
+
+    /* visited link */
+    a:visited {
+        color: #5AA4F9;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: #4c85f9;
+    }
+
+    /* selected link */
+    a:active {
+        color: @white;
+    }
+}
+
 .dark {
     a:link {
         cursor: pointer;
@@ -88,12 +111,6 @@ body {
 }
 
 .icon {
-    &-back {
-        display: inline-block;
-        background: url("../images/back_48X48.png") no-repeat;
-        width: 48px;
-        height: 48px;
-    }
 
     &-loading32 {
         display: inline-block;
@@ -118,6 +135,12 @@ body {
         background: url("../images/loading_128.GIF") no-repeat;
         width: 128px;
         height: 128px;
+    }
+    &-profile{
+        display: inline-block;
+        background: url("../images/profile.jpg") no-repeat;
+        width: 139px;
+        height: 140px;
     }
 }
 
@@ -281,7 +304,7 @@ body {
         display: none;
     }
     .icon-m {
-        font-size: 20px;
+        font-size: 30px;
         text-rendering: auto;
         display: block;
     }

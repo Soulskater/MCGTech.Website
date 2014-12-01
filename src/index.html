@@ -78,7 +78,7 @@
     <!--Header-->
     <div class="header blue-grey-800 text-space m all">
         <span class="font-l space xl right"><a href="#/home">MG</a></span>
-        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top"><a href="#/login">Login</a>, or <a
+        <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top blue-link"><a href="#/login">Login</a>, or <a
                 href="#/signup">Sign up</a></span>
 
         <div ng-if="authService.user.isAuthenticated" class="font-s user-info text-right">
@@ -94,7 +94,7 @@
 
     <!--ContentView-->
     <div class="view-container">
-        <div ng-view class="view-animation">
+        <div ng-view autoscroll="true" class="view-animation" style="overflow: auto;">
 
         </div>
     </div>
