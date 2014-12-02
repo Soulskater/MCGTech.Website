@@ -81,4 +81,4 @@ gulp.task('watch', function () {
 gulp.task('dev', ['copy-js', 'copy-fonts', 'copy-images', 'copy-css', 'copy-features', 'copy-packages', 'inject-features', 'watch']);
 
 // Build All
-gulp.task('build', ['copy-js', 'copy-fonts', 'copy-images', 'copy-css', 'copy-features', 'copy-packages', 'inject-features', 'clean']);
+gulp.task('build', ['copy-js', 'copy-fonts', 'copy-images', 'copy-css', 'copy-features', 'copy-packages', 'inject-features']);
