@@ -59,17 +59,17 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
-
-  :: Install gulp
+ :: Install gulp
   echo Installing Gulp
   call npm install gulp -g --silent
-  npm install gulp-concat
-  npm install gulp-inject
-  npm install gulp-watch
-  npm install del
-  IF !ERRORLEVEL! NEQ 0 goto error
+  call npm install gulp-concat
+  call npm install gulp-inject
+  call npm install gulp-watch
+  call npm install del
   echo Installed Gulp Successfully
+  echo Run gulp build task
   call gulp build
+  echo Build executed successfully
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
