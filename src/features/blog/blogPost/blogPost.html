@@ -31,7 +31,7 @@
             <div ng-if="blogPost.comments.length == 0" class="font-m space m top">
                 No comments
             </div>
-            <div class="space m all" style="border-bottom: 1px solid rgba(255,255,255, 0.3); overflow: hidden"
+            <div class="space m all fading" style="border-bottom: 1px solid rgba(255,255,255, 0.3); overflow: hidden"
                  ng-repeat="comment in blogPost.comments">
                 <div class="font-s space s bottom">{{comment.comment}}</div>
                 <div class="font-xs secondary-text" style="overflow: hidden;">
@@ -42,8 +42,8 @@
             <!--New Comment-->
             <div class="space xl top" ng-if="$authService.user.isAuthenticated" style="overflow: hidden;">
                 <div class="font-s space s bottom">Write a comment</div>
-                <div class="comment-wrapper blue-grey-100 space s bottom">
-                    <textarea class="comment-area" ng-model="newComment"
+                <div class="comment-wrapper blue-grey-50 space s bottom">
+                    <textarea class="comment-area" ng-model="$parent.$parent.newComment"
                               placeholder="Write a comment as {{$authService.userProfile.firstName + ' ' + $authService.userProfile.lastName}}">
                     </textarea>
                 </div>

@@ -658,7 +658,7 @@ body a:active {
 @keyframes view-animation-enter {
   from {
     z-index: 100;
-    right: -3000px;
+    right: -4000px;
     opacity: 0;
   }
   to {
@@ -672,13 +672,13 @@ body a:active {
     left: 0;
   }
   to {
-    left: -3000px;
+    left: -4000px;
   }
 }
 @-webkit-keyframes view-animation-enter {
   from {
     z-index: 100;
-    right: -3000px;
+    right: -4000px;
   }
   to {
     left: 0;
@@ -690,7 +690,7 @@ body a:active {
     left: 0;
   }
   to {
-    left: -3000px;
+    left: -4000px;
   }
 }
 .dropdown {
