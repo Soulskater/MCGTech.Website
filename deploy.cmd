@@ -68,7 +68,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call npm install del
   echo Installed Gulp Successfully
   echo Run gulp build task
-  call .\node_modules\.bin\gulp build
+  call %HOMEPATH%\node_modules\.bin\gulp build
   echo Build executed successfully
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
