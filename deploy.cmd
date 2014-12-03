@@ -61,14 +61,14 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 )
  :: Install gulp
   echo Installing Gulp
-  call npm install gulp -g --silent
+  call npm install gulp@3.8.10 -g
   call npm install gulp-concat
   call npm install gulp-inject
   call npm install gulp-watch
   call npm install del
   echo Installed Gulp Successfully
   echo Run gulp build task
-  call gulp build
+  call gulp dev
   echo Build executed successfully
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
