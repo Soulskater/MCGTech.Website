@@ -8,7 +8,6 @@ angular.module("MCGTech")
         _init();
         function _init() {
             $apiService.getProjects().then(function (projects) {
-                console.log(projects);
                 $scope.projects = projects;
             });
         }

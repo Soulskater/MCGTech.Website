@@ -2,9 +2,7 @@
  * Created by MCG on 2014.10.30..
  */
 angular.module("MCGTech")
-    .service("blogService", ["$q", "$http", function ($q, $http) {
-        var baseUrl = "http://service.mcgtech.net/";
-        //var baseUrl = "http://localhost:49994/";
+    .service("blogService", ["$q", "$http", "serviceUrl", function ($q, $http, $url) {
 
         var blogPosts;
         return {
@@ -14,7 +12,7 @@ angular.module("MCGTech")
                     defer.resolve(blogPosts);
                     return defer.promise;
                 }
-                $http.get(baseUrl + "api/blog").success(function (blogs) {
+                $http.get($url.baseUrl + "api/blog").success(function (blogs) {
                     defer.resolve(blogs);
                     blogPosts = blogs;
                 }).error(function (ex) {
@@ -24,7 +22,7 @@ angular.module("MCGTech")
             },
             saveBlogComment: function (blogId, commentText) {
                 var defer = $q.defer();
-                $http.post(baseUrl + "api/blog/comment/create", {
+                $http.post($url.baseUrl + "api/blog/comment/create", {
                     blogId: blogId,
                     comment: commentText
                 }).success(function () {
@@ -43,7 +41,7 @@ angular.module("MCGTech")
                     defer.resolve(post);
                     return defer.promise;
                 }
-                $http.get(baseUrl + "api/blog").success(function (blogs) {
+                $http.get($url.baseUrl + "api/blog").success(function (blogs) {
                     blogPosts = blogs;
                     var post = linq(blogPosts).firstOrDefault(function (item) {
                         return item.blogId === blogId;
@@ -56,9 +54,20 @@ angular.module("MCGTech")
             },
             rateBlog: function (blogId, value) {
                 var defer = $q.defer();
-                $http.post(baseUrl + "api/blog/rate", {
+                $http.post($url.baseUrl + "api/blog/rate", {
                     blogId: blogId,
                     value: value
+                }).success(function () {
+                    defer.resolve();
+                }).error(function (ex) {
+                    defer.reject(ex);
+                });
+                return defer.promise;
+            },
+            saveBlogPost: function (blogPost) {
+                var defer = $q.defer();
+                $http.post($url.baseUrl + "api/blog/create", {
+                    blogPost: blogPost
                 }).success(function () {
                     defer.resolve();
                 }).error(function (ex) {

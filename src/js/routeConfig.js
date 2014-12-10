@@ -2,6 +2,10 @@
  * Created by MCG on 2014.10.24..
  */
 angular.module("MCGTech")
+    .constant("serviceUrl",{
+        //baseUrl: "http://service.mcgtech.net/",
+        baseUrl:"http://localhost:49994/"
+    })
     .config(['$routeProvider', '$locationProvider',
         function ($routeProvider, $locationProvider) {
             $routeProvider.
@@ -16,6 +20,10 @@ angular.module("MCGTech")
                 when('/blog/post/:postId', {
                     templateUrl: 'features/blog/blogPost/blogPost.html',
                     controller: 'BlogEntryCtrl'
+                }).
+                when('/blog/create', {
+                    templateUrl: 'features/blog/newBlogPost/newBlogPost.html',
+                    controller: 'NewBlogPostCtrl'
                 }).
                 when('/about', {
                     templateUrl: 'features/about/about.html',
@@ -32,10 +40,6 @@ angular.module("MCGTech")
                 when("/signup", {
                     templateUrl: "features/account/register/register.html",
                     controller: "RegisterCtrl"
-                }).
-                when("/flowdesigner", {
-                    templateUrl: "features/projects/flowdesigner/flowdesigner.html"
-                    //controller: "RegisterCtrl"
                 }).
                 otherwise({
                     redirectTo: '/home'

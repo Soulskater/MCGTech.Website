@@ -2,10 +2,8 @@
  * Created by gmeszaros on 10/31/2014.
  */
 angular.module("MCGTech")
-    .service('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+    .service('authService', ['$http', '$q', 'localStorageService', 'serviceUrl', function ($http, $q, localStorageService, $url) {
 
-        //var serviceBase = "http://localhost:49994/";
-        var serviceBase = 'http://service.mcgtech.net/';
         var authServiceFactory = {};
 
         var _authentication = {
@@ -18,23 +16,18 @@ angular.module("MCGTech")
         };
 
         var _saveRegistration = function (registration) {
-
             _logOut();
-
-            return $http.post(serviceBase + 'api/account/register', registration).then(function (response) {
+            return $http.post($url.baseUrl + 'api/account/register', registration).then(function (response) {
                 return response;
             });
-
         };
 
         var _login = function (loginData) {
 
             var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
-
             var deferred = $q.defer();
 
-            $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
-
+            $http.post($url.baseUrl + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
                 localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
 
                 _fillAuthData();
@@ -73,7 +66,7 @@ angular.module("MCGTech")
                 defer.resolve(_userProfile);
                 return defer.promise;
             }
-            $http.get(serviceBase + 'api/account/user')
+            $http.get($url.baseUrl + 'api/account/user')
                 .success(function (response) {
                     _userProfile.firstName = response.firstName;
                     _userProfile.lastName = response.lastName;
