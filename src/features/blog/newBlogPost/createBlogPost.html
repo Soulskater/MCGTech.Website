@@ -3,10 +3,10 @@
          style="position: absolute;margin-left: 30px;margin-top: 10px;"></div>-->
     <div class="text-center space xl top bottom">
         <div class="title-input-wrapper text-space m all blue-grey-400">
-            <input type="text" placeholder="New Title" class="font-l title-input"/>
+            <input type="text" placeholder="New Title" ng-model="blogPostDraft.title" class="font-m title-input"/>
         </div>
     </div>
-    <div class="text-center text-space l all text-editor-wrapper">
+    <div class="text-center text-space l all text-editor-wrapper font-s">
         <text-angular class="text-left" ng-model="blogPostDraft.content"></text-angular>
         <div class="text-right space m top">
             <div class="btn-l light-blue-500" ng-click="saveBlogPostDraft()">Save</div>

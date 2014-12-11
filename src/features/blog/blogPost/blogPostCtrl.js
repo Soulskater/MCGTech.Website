@@ -2,7 +2,7 @@
  * Created by MCG on 2014.10.24..
  */
 angular.module("MCGTech")
-    .controller("BlogEntryCtrl", ["$scope", "navigationService", "blogService", "authService", "$routeParams", function ($scope, $navigation, $apiService, $authService, $routeParams) {
+    .controller("BlogPostCtrl", ["$scope", "navigationService", "blogService", "authService", "$routeParams", function ($scope, $navigation, $apiService, $authService, $routeParams) {
 
         _init();
         function _init() {

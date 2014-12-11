@@ -89,6 +89,7 @@
             <div>{{authService.userProfile.firstName}}</div>
             <div>{{authService.userProfile.lastName}}
                 <dropdown>
+                    <dropdown-item class="font-s" ng-click="goToDrafts()">My drafts</dropdown-item>
                     <dropdown-item class="font-s" ng-click="logOut()">Logout</dropdown-item>
                 </dropdown>
             </div>

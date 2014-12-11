@@ -36,7 +36,7 @@ angular.module("MCGTech")
                 var defer = $q.defer();
                 if (blogPosts) {
                     var post = linq(blogPosts).firstOrDefault(function (item) {
-                       return item.blogId === blogId;
+                        return item.blogId === blogId;
                     });
                     defer.resolve(post);
                     return defer.promise;
@@ -64,26 +64,44 @@ angular.module("MCGTech")
                 });
                 return defer.promise;
             },
+            getBlogPostDrafts: function () {
+                var defer = $q.defer();
+                $http.get($url.baseUrl + "api/blog/draft")
+                    .success(function (drafts) {
+                        defer.resolve(drafts);
+                    }).error(function (ex) {
+                        defer.reject(ex);
+                    });
+                return defer.promise;
+            },
             saveBlogPostDraft: function (blogPostDraft) {
                 var defer = $q.defer();
-                $http.post($url.baseUrl + "api/blog/draft/save", {
-                    blogPostDraft: blogPostDraft
-                }).success(function () {
-                    defer.resolve();
-                }).error(function (ex) {
-                    defer.reject(ex);
-                });
+                $http.post($url.baseUrl + "api/blog/draft/save", blogPostDraft)
+                    .success(function (savedDraft) {
+                        defer.resolve(savedDraft);
+                    }).error(function (ex) {
+                        defer.reject(ex);
+                    });
+                return defer.promise;
+            },
+            deleteBlogPostDraft: function (blogPostDraft) {
+                var defer = $q.defer();
+                $http.post($url.baseUrl + "api/blog/draft/delete", blogPostDraft.blogPostDraftId)
+                    .success(function () {
+                        defer.resolve();
+                    }).error(function (ex) {
+                        defer.reject(ex);
+                    });
                 return defer.promise;
             },
             publishBlogPost: function (blogPostDraft) {
                 var defer = $q.defer();
-                $http.post($url.baseUrl + "api/blog/create", {
-                    blogPostDraft: blogPostDraft
-                }).success(function () {
-                    defer.resolve();
-                }).error(function (ex) {
-                    defer.reject(ex);
-                });
+                $http.post($url.baseUrl + "api/blog/create", blogPostDraft)
+                    .success(function () {
+                        defer.resolve();
+                    }).error(function (ex) {
+                        defer.reject(ex);
+                    });
                 return defer.promise;
             }
         };

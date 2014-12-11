@@ -92,3 +92,9 @@
 .icon-arrow-left-light:before {
   content: "r";
 }
+.icon-trash-bin:before {
+  content: "s";
+}
+.icon-trash:before {
+  content: "t";
+}

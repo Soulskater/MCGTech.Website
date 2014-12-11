@@ -1,0 +1,28 @@
+.draft-list {
+  max-width: 500px;
+  list-style-type: none;
+}
+.draft-list .draft-list-item {
+  padding: 5px;
+  background: #2F3B41;
+  margin-bottom: 5px;
+  max-width: 450px;
+  position: relative;
+  cursor: pointer;
+}
+.draft-list .draft-list-item:hover {
+  opacity: 0.8;
+}
+.draft-list .draft-list-item:hover .delete {
+  display: inherit;
+}
+.draft-list .draft-list-item .delete {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+}
+.draft-list .draft-list-item .last-saved {
+  font-style: italic;
+  line-height: 15px;
+}

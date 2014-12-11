@@ -15,6 +15,9 @@ angular.module("MCGTech")
             authService.logOut();
             $navigation.go("/home");
         };
+        $scope.goToDrafts = function () {
+            $navigation.go("/blog/draft");
+        };
 
         _init();
         function _init() {

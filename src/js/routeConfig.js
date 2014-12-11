@@ -2,9 +2,9 @@
  * Created by MCG on 2014.10.24..
  */
 angular.module("MCGTech")
-    .constant("serviceUrl",{
+    .constant("serviceUrl", {
         //baseUrl: "http://service.mcgtech.net/",
-        baseUrl:"http://localhost:49994/"
+        baseUrl: "http://localhost:49994/"
     })
     .config(['$routeProvider', '$locationProvider',
         function ($routeProvider, $locationProvider) {
@@ -19,11 +19,15 @@ angular.module("MCGTech")
                 }).
                 when('/blog/post/:postId', {
                     templateUrl: 'features/blog/blogPost/blogPost.html',
-                    controller: 'BlogEntryCtrl'
+                    controller: 'BlogPostCtrl'
                 }).
                 when('/blog/create', {
-                    templateUrl: 'features/blog/newBlogPost/newBlogPost.html',
-                    controller: 'NewBlogPostCtrl'
+                    templateUrl: 'features/blog/newBlogPost/createBlogPost.html',
+                    controller: 'CreateBlogPostCtrl'
+                }).
+                when('/blog/draft', {
+                    templateUrl: 'features/blog/blogPostDraftList/blogPostDraftList.html',
+                    controller: 'BlogPostDraftCtrl'
                 }).
                 when('/about', {
                     templateUrl: 'features/about/about.html',
