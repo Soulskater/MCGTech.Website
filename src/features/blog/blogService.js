@@ -64,10 +64,21 @@ angular.module("MCGTech")
                 });
                 return defer.promise;
             },
-            saveBlogPost: function (blogPost) {
+            saveBlogPostDraft: function (blogPostDraft) {
+                var defer = $q.defer();
+                $http.post($url.baseUrl + "api/blog/draft/save", {
+                    blogPostDraft: blogPostDraft
+                }).success(function () {
+                    defer.resolve();
+                }).error(function (ex) {
+                    defer.reject(ex);
+                });
+                return defer.promise;
+            },
+            publishBlogPost: function (blogPostDraft) {
                 var defer = $q.defer();
                 $http.post($url.baseUrl + "api/blog/create", {
-                    blogPost: blogPost
+                    blogPostDraft: blogPostDraft
                 }).success(function () {
                     defer.resolve();
                 }).error(function (ex) {

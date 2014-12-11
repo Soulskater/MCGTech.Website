@@ -28,6 +28,7 @@
   font-family: metro-font;
   font-size: 2.5rem;
 }
+
 @media (max-height: 600px) {
   .font-xs {
     font-family: metro-font;
@@ -38,182 +39,218 @@
     font-family: metro-font;
     font-size: 15px;
   }
+
   .font-m {
     font-family: metro-font;
     font-size: 1.1rem;
   }
+
   .font-l {
     font-family: metro-font;
     font-size: 1.7rem;
   }
+
   .font-xl {
     font-family: metro-font;
     font-size: 2.0rem;
   }
 }
 
-.space{
-  &.s{
-    &.all{
+.space {
+  &.s {
+    &.all {
       margin: 5px;
     }
-    &.top{
+    &.top {
       margin-top: 5px;
     }
-    &.right{
+    &.right {
       margin-right: 5px;
     }
-    &.bottom{
+    &.bottom {
       margin-bottom: 5px;
     }
-    &.left{
+    &.left {
       margin-left: 5px;
     }
   }
-  &.m{
-    &.all{
+  &.m {
+    &.all {
       margin: 10px;
     }
-    &.top{
+    &.top {
       margin-top: 10px;
     }
-    &.right{
+    &.right {
       margin-right: 10px;
     }
-    &.bottom{
+    &.bottom {
       margin-bottom: 10px;
     }
-    &.left{
+    &.left {
       margin-left: 10px;
     }
   }
-  &.l{
-    &.all{
+  &.l {
+    &.all {
       margin: 15px;
     }
-    &.top{
+    &.top {
       margin-top: 15px;
     }
-    &.right{
+    &.right {
       margin-right: 15px;
     }
-    &.bottom{
+    &.bottom {
       margin-bottom: 15px;
     }
-    &.left{
+    &.left {
       margin-left: 15px;
     }
   }
-  &.xl{
-    &.all{
+  &.xl {
+    &.all {
       margin: 25px;
     }
-    &.top{
+    &.top {
       margin-top: 25px;
     }
-    &.right{
+    &.right {
       margin-right: 25px;
     }
-    &.bottom{
+    &.bottom {
       margin-bottom: 25px;
     }
-    &.left{
+    &.left {
       margin-left: 25px;
     }
   }
 }
 
-.text-space{
-  &.s{
-    &.all{
+.text-space {
+  &.s {
+    &.all {
       padding: 5px;
     }
-    &.top{
+    &.top {
       padding-top: 5px;
     }
-    &.right{
+    &.right {
       padding-right: 5px;
     }
-    &.bottom{
+    &.bottom {
       padding-bottom: 5px;
     }
-    &.left{
+    &.left {
       padding-left: 5px;
     }
   }
-  &.m{
-    &.all{
+  &.m {
+    &.all {
       padding: 10px;
     }
-    &.top{
+    &.top {
       padding-top: 10px;
     }
-    &.right{
+    &.right {
       padding-right: 10px;
     }
-    &.bottom{
+    &.bottom {
       padding-bottom: 10px;
     }
-    &.left{
+    &.left {
       padding-left: 10px;
     }
   }
-  &.l{
-    &.all{
+  &.l {
+    &.all {
       padding: 15px;
     }
-    &.top{
+    &.top {
       padding-top: 15px;
     }
-    &.right{
+    &.right {
       padding-right: 15px;
     }
-    &.bottom{
+    &.bottom {
       padding-bottom: 15px;
     }
-    &.left{
+    &.left {
       padding-left: 15px;
     }
   }
-  &.xl{
-    &.all{
+  &.xl {
+    &.all {
       padding: 25px;
     }
-    &.top{
+    &.top {
       padding-top: 25px;
     }
-    &.right{
+    &.right {
       padding-right: 25px;
     }
-    &.bottom{
+    &.bottom {
       padding-bottom: 25px;
     }
-    &.left{
+    &.left {
       padding-left: 25px;
     }
   }
 }
 
-.text-left{
-    text-align: left;
+.text-left {
+  text-align: left;
 }
 
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 
-.text-right{
-    text-align: right;
+.text-right {
+  text-align: right;
 }
 
-.clear-all{
-    clear: both;
+.clear-all {
+  clear: both;
 }
 
-.pull-left{
-    float: left;
+.pull-left {
+  float: left;
 }
 
-.pull-right{
-    float: right;
+.pull-right {
+  float: right;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0 5px;
+  display: inline-block;
+
+  &-s:extend(.btn) {
+    height: 25px;
+    line-height: 25px;
+    min-width: 80px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  &-m:extend(.btn) {
+    height: 30px;
+    line-height: 30px;
+    min-width: 100px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  &-l:extend(.btn) {
+    height: 40px;
+    line-height: 40px;
+    min-width: 100px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
 }

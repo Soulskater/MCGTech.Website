@@ -183,3 +183,37 @@
 .pull-right {
   float: right;
 }
+.btn,
+.btn-s,
+.btn-m,
+.btn-l {
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0 5px;
+  display: inline-block;
+}
+.btn-s {
+  height: 25px;
+  line-height: 25px;
+  min-width: 80px;
+}
+.btn-s:hover {
+  opacity: 0.8;
+}
+.btn-m {
+  height: 30px;
+  line-height: 30px;
+  min-width: 100px;
+}
+.btn-m:hover {
+  opacity: 0.8;
+}
+.btn-l {
+  height: 40px;
+  line-height: 40px;
+  min-width: 100px;
+}
+.btn-l:hover {
+  opacity: 0.8;
+}

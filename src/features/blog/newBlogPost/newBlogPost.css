@@ -1,5 +1,5 @@
 .title-input-wrapper {
-  background: rgba(69, 90, 100, 0.42);
+  background: rgba(69, 90, 100, 0.42) !important;
   max-width: 600px;
   display: inline-block;
   width: 100%;
@@ -15,16 +15,19 @@
   margin-right: auto;
   max-width: 900px;
 }
-.form-control {
+.text-editor-wrapper .form-control {
   background: rgba(69, 90, 100, 0.42);
 }
-.btn-group {
+.text-editor-wrapper .btn-group {
   display: inline-block;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
-.btn-group .btn {
-  padding: 10px;
-  background: rgba(0, 122, 203, 0.86);
+.text-editor-wrapper .btn-group .btn {
+  padding: 10px 0;
+  min-width: 35px;
+  background: rgba(101, 129, 147, 0.86);
   border: none;
   color: #fff;
+  margin-right: 1px;
 }

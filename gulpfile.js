@@ -31,6 +31,7 @@ function copyImages() {
     return gulp.src("src/images/*.*")
         .pipe(gulp.dest('dist/images'));
 }
+
 function copyFeatures() {
     return gulp.src(["src/features/**/*.html", "src/features/**/*.js", "src/features/**/*.css"])
         .pipe(gulp.dest('dist/features'));

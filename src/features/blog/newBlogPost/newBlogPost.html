@@ -7,6 +7,10 @@
         </div>
     </div>
     <div class="text-center text-space l all text-editor-wrapper">
-        <text-angular ng-model="blogPostDraft.content"></text-angular>
+        <text-angular class="text-left" ng-model="blogPostDraft.content"></text-angular>
+        <div class="text-right space m top">
+            <div class="btn-l light-blue-500" ng-click="saveBlogPostDraft()">Save</div>
+            <div class="btn-l purple-500 space s left" ng-click="publishBlogPost()">Publish</div>
+        </div>
     </div>
 </div>
