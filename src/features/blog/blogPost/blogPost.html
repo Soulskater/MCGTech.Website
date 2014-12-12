@@ -6,7 +6,7 @@
     </div>
     <div ng-if="!loading">
         <div class="font-l text-center space l top">{{blogPost.title}}</div>
-        <div class="text-center text-space l all blog-content">
+        <div class="text-center text-space l all blog-content fading">
             <span class="font-xs secondary-text">Author: Gábor Mészáros, Comments: {{blogPost.comments.length}}</span>
 
             <span class="font-xs secondary-text pull-right">
@@ -31,7 +31,7 @@
             <div ng-if="blogPost.comments.length == 0" class="font-m space m top">
                 No comments
             </div>
-            <div class="space m all fading" style="border-bottom: 1px solid rgba(255,255,255, 0.3); overflow: hidden"
+            <div class="space m all" style="border-bottom: 1px solid rgba(255,255,255, 0.3); overflow: hidden"
                  ng-repeat="comment in blogPost.comments">
                 <div class="font-s space s bottom">{{comment.comment}}</div>
                 <div class="font-xs secondary-text" style="overflow: hidden;">

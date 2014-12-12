@@ -551,19 +551,3 @@
     display: inline-block;
   }
 }
-div .fading {
-  opacity: 1;
-}
-div .fading .ng-enter {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  opacity: 0;
-}
-div .fading .ng-enter-active {
-  opacity: 1;
-}
-div .fading .ng-leave {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  opacity: 0;
-}

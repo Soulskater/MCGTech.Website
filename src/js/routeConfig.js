@@ -21,12 +21,8 @@ angular.module("MCGTech")
                     templateUrl: 'features/blog/blogPost/blogPost.html',
                     controller: 'BlogPostCtrl'
                 }).
-                when('/blog/create', {
-                    templateUrl: 'features/blog/newBlogPost/createBlogPost.html',
-                    controller: 'CreateBlogPostCtrl'
-                }).
                 when('/blog/draft', {
-                    templateUrl: 'features/blog/blogPostDraftList/blogPostDraftList.html',
+                    templateUrl: 'features/blog/blogPostDrafts/blogPostDrafts.html',
                     controller: 'BlogPostDraftCtrl'
                 }).
                 when('/about', {
