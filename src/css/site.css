@@ -785,9 +785,6 @@ body a:active {
     display: block;
   }
 }
-div .fading {
-  opacity: 1;
-}
 div .fading .ng-enter {
   -webkit-transition: 1.0s;
   transition: 1.0s;

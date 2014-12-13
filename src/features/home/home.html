@@ -1,5 +1,5 @@
 <div>
-    <div ng-if="$authService.user.isAuthenticated" class="font-l text-center space l top">Welcome, {{$authService.userProfile.firstName}}!</div>
+    <div ng-if="$authService.user.isAuthenticated" class="font-l text-center space l top">Welcome, {{$authService.user.profile.firstName}}!</div>
     <div ng-if="!$authService.user.isAuthenticated" class="font-l text-center space l top">Welcome</div>
     <div class="menu-wrapper text-center">
         <div class="menu-box font-m light-blue-a700" ng-click="$navigation.go('/projects')">

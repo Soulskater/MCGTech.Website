@@ -10,8 +10,8 @@ angular.module("MCGTech")
                 blogPost: "=",
                 tileChanged: "&"
             },
-            template: '<div>' +
-            '<div class="" ng-include="activeTile.url">' +
+            template: '<div class="fading">' +
+            '<div ng-include="activeTile.url">' +
             '</div>' +
             '</div>',
             link: function ($scope, element, attrs) {

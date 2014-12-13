@@ -86,8 +86,8 @@
                 href="#/signup">Sign up</a></span>
 
         <div ng-if="authService.user.isAuthenticated" class="font-s user-info text-right">
-            <div>{{authService.userProfile.firstName}}</div>
-            <div>{{authService.userProfile.lastName}}
+            <div>{{authService.user.profile.firstName}}</div>
+            <div>{{authService.user.profile.lastName}}
                 <dropdown class="blue-grey-50">
                     <dropdown-item class="font-s" ng-click="goToDrafts()">My drafts</dropdown-item>
                     <dropdown-item class="font-s" ng-click="logOut()">Logout</dropdown-item>

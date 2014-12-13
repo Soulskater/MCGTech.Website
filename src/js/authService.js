@@ -27,11 +27,23 @@ angular.module("MCGTech")
             var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
             var deferred = $q.defer();
 
-            $http.post($url.baseUrl + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
-                localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
-
-                _fillAuthData();
-                deferred.resolve(response);
+            $http.post($url.baseUrl + 'token', data, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).success(function (response) {
+                localStorageService.set('authorizationData', {
+                    token: response.access_token,
+                    userName: loginData.userName
+                });
+                _getUserProfile().then(function (profile) {
+                    localStorageService.set('authorizationData', {
+                        token: response.access_token,
+                        userName: loginData.userName,
+                        profile: profile
+                    });
+                    _fillAuthData();
+                    deferred.resolve(response);
+                }).catch(function (err) {
+                    _logOut();
+                    deferred.reject(err);
+                });
             }).error(function (err, status) {
                 _logOut();
                 deferred.reject(err);
@@ -47,6 +59,7 @@ angular.module("MCGTech")
 
             _authentication.isAuthenticated = false;
             _authentication.userName = "";
+            _authentication.profile = {};
         };
 
         var _fillAuthData = function () {
@@ -55,22 +68,16 @@ angular.module("MCGTech")
             if (authData) {
                 _authentication.isAuthenticated = true;
                 _authentication.userName = authData.userName;
-                _getUserProfile();
+                _authentication.profile = authData.profile;
             }
 
         };
 
         var _getUserProfile = function () {
             var defer = $q.defer();
-            if (_userProfile.firstName !== "") {
-                defer.resolve(_userProfile);
-                return defer.promise;
-            }
             $http.get($url.baseUrl + 'api/account/user')
-                .success(function (response) {
-                    _userProfile.firstName = response.firstName;
-                    _userProfile.lastName = response.lastName;
-                    defer.resolve(response);
+                .success(function (profile) {
+                    defer.resolve(profile);
                 }).error(function (ex) {
                     _logOut();
                     defer.reject(ex);
@@ -81,7 +88,6 @@ angular.module("MCGTech")
         authServiceFactory.login = _login;
         authServiceFactory.logOut = _logOut;
         authServiceFactory.getUserProfile = _getUserProfile;
-        authServiceFactory.userProfile = _userProfile;
         authServiceFactory.fillAuthData = _fillAuthData;
         authServiceFactory.user = _authentication;
 

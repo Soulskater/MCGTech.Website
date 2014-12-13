@@ -6,7 +6,7 @@
         <span class="icon-loading80"></span>
     </div>
 
-    <div ng-if="!loading" class="blog-list space xl top fading">
+    <div ng-if="!loading" class="blog-list space xl top">
         <div style="background: rgba(213, 237, 255, 0.1);" ng-repeat-start="postGroup in blogPostGroups"
              class="blog-entry-group space m top font-s" element-leave="postGroup.selected"
              ng-click="selectGroup(postGroup)" ng-style="{ opacity: !postGroup.selected && hasSelected() ? 0.5 : 1 }">

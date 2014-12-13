@@ -6,9 +6,9 @@
     <div ng-if="!loading" class="fading">
         <div class="space xl top right draft-list-wrapper">
             <ul class="draft-list">
-                <li class="draft-list-item font-s light-blue-500" ng-repeat="draft in blogPostDrafts" ng-click="selectDraft(draft)" ng-class="{ selected: draft === blogPostDraft }">
+                <li class="draft-list-item font-s light-blue-500" ng-repeat="draft in blogPostDraftList" ng-click="selectDraft(draft)" ng-class="{ selected: draft === blogPostDraft }">
                     <div class="space m bottom">{{draft.title}}</div>
-                    <div class="last-saved font-xs">{{moment(draft.lastSaved).format("DD MM YYYY,h:mm")}}
+                    <div class="last-saved font-xs">Last saved: {{moment(draft.lastSaved).format("DD MM YYYY,h:mm")}}
                     </div>
                     <span ng-click="deleteBlogPostDraft($index)" class="delete icon-s icon-trash"></span>
                 </li>

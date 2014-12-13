@@ -51,7 +51,7 @@ angular.module("MCGTech")
             $scope.blogPost.comments.push({
                 blogId: $scope.blogPost.blogId,
                 comment: $scope.newComment,
-                user: $authService.userProfile,
+                user: $authService.user.profile,
                 created: moment(new Date())
             });
             $apiService.saveBlogComment($scope.blogPost.blogId, $scope.newComment);
