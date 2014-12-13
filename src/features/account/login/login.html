@@ -13,10 +13,10 @@
                        data-ng-model="loginData.password"
                        required>
             </div>
-            <button class="form-button font-s pull-right space m top" ng-disabled="form.$invalid"
+            <button type="submit" class="form-button font-s pull-right space m top" ng-disabled="form.$invalid"
                     data-ng-click="login()">Login
             </button>
-            <span ng-if="authenticating" class="icon-loading64 space m top right pull-right"></span>
+            <span ng-if="authenticating" class="icon-loading32 space m top right pull-right"></span>
 
             <div data-ng-hide="message == ''" class="font-s alert clear-all">
                 {{message}}

@@ -41,7 +41,7 @@ angular.module("MCGTech")
         $scope.hasRating = function () {
             return linq($scope.blogPost.ratings).firstOrDefault(function (rate) {
                     return rate.userId === $authService.user.userName;
-                }) !== null;
+                }) != null;
         };
 
         $scope.postComment = function () {

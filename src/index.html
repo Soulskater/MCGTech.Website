@@ -85,14 +85,14 @@
         <span ng-if="!authService.user.isAuthenticated" class="font-xs pull-right text-space m top blue-link"><a href="#/login">Login</a>, or <a
                 href="#/signup">Sign up</a></span>
 
-        <div ng-if="authService.user.isAuthenticated" class="font-s user-info text-right">
+        <div ng-if="authService.user.isAuthenticated" class="font-s user-info text-right pointer">
             <div>{{authService.user.profile.firstName}}</div>
             <div>{{authService.user.profile.lastName}}
-                <dropdown class="blue-grey-50">
-                    <dropdown-item class="font-s" ng-click="goToDrafts()">My drafts</dropdown-item>
-                    <dropdown-item class="font-s" ng-click="logOut()">Logout</dropdown-item>
-                </dropdown>
             </div>
+            <dropdown class="blue-grey-50">
+                <dropdown-item class="font-s" ng-click="goToDrafts()">My drafts</dropdown-item>
+                <dropdown-item class="font-s" ng-click="logOut()">Logout</dropdown-item>
+            </dropdown>
         </div>
     </div>
     <!--/Header-->

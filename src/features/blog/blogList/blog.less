@@ -1,47 +1,81 @@
 @import "../../../css/site.colors.less";
+@import "../../../css/common.less";
 
 .blog-list {
-  text-align: center;
-  font-size: 0;
-
-  .blog-entry-group {
-    padding: 10px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    cursor: default;
-    position: relative;
-    vertical-align: top;
+    font-size: 0;
 
-    .blog-entry {
-      color: @white;
-      border: 1px solid #676767;
-      position: relative;
-      width: 220px;
-      height: 220px;
-      display: inline-block;
-      vertical-align: top;
-      cursor: pointer;
-      .created {
-        position: absolute;
-        right: 10px;
-        bottom: 5px;
-        font-style: italic;
-        color: @white;
-      }
+    .blog-entry-group {
+        padding: 10px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        cursor: default;
+        position: relative;
+        vertical-align: top;
+
+        .blog-entry {
+            color: @white;
+            border: 1px solid #676767;
+            position: relative;
+            width: 220px;
+            height: 220px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            @media (max-height: @max-height) {
+                width: 150px;
+                height: 150px;
+            }
+            .created {
+                position: absolute;
+                right: 10px;
+                bottom: 5px;
+                font-style: italic;
+                color: @white;
+            }
+
+            .ng-enter {
+                -webkit-transition: 1.0s;
+                transition: 1.0s;
+                opacity: 0;
+            }
+            .ng-enter-active {
+                opacity: 1;
+            }
+            .ng-leave {
+                -webkit-transition: 1.0s;
+                transition: 1.0s;
+                opacity: 0;
+            }
+            .ng-leave-active {
+                opacity: 0;
+            }
+        }
     }
-  }
 
-  .line-break {
-    display: none;
-  }
+    .line-break {
+        display: none;
+    }
+}
+
+.activity-chart {
+    height: 120px;
+
+    @media (max-height: @max-height) {
+        height: 60px;
+    }
 }
 
 @media screen and (max-width: 1280px) {
-  .blog-list {
-    .line-break:nth-child(4) {
-      display: inline-block;
+    .blog-list {
+        .line-break:nth-child(4) {
+            display: inline-block;
+        }
     }
-  }
 }

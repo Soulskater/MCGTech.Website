@@ -183,6 +183,9 @@
 .pull-right {
   float: right;
 }
+.pointer {
+  cursor: pointer;
+}
 .btn,
 .btn-s,
 .btn-m,

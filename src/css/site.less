@@ -1,3 +1,4 @@
+@import "common.less";
 @import "site.colors.less";
 
 body {
@@ -101,6 +102,13 @@ body {
     border: 1px solid rgb(255, 255, 255, 0.87);
     border-radius: 20px;
     display: inline-block;
+    @media (max-height: @max-height) {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        display: inline-block;
+    }
 }
 
 .frame-s {
@@ -113,17 +121,23 @@ body {
 
 .icon {
 
+    &-loading16 {
+        display: inline-block;
+        background: url("../images/loading_16.GIF") no-repeat;
+        width: 16px;
+        height: 16px;
+    }
     &-loading32 {
         display: inline-block;
-        background: url("../images/loading_32X34.GIF") no-repeat;
+        background: url("../images/loading_32.GIF") no-repeat;
         width: 32px;
-        height: 34px;
+        height: 32px;
     }
-    &-loading48 {
+    &-loading24 {
         display: inline-block;
-        background: url("../images/loading_48X51.GIF") no-repeat;
-        width: 48px;
-        height: 51px;
+        background: url("../images/loading_24.GIF") no-repeat;
+        width: 24px;
+        height: 24px;
     }
     &-loading80 {
         display: inline-block;
@@ -154,6 +168,9 @@ body {
     bottom: 100px;
     overflow-y: auto;
     overflow-x: hidden;
+    @media (max-height: @max-height) {
+        bottom: 42px;
+    }
 }
 
 .view-animation.ng-enter, .view-animation.ng-leave {
@@ -261,7 +278,8 @@ body {
         cursor: pointer;
 
         &:hover {
-            background: @light-blue;
+            background: #37474F;
+            color: white;
         }
     }
 }
@@ -283,41 +301,23 @@ body {
     font-size: 40px;
     text-rendering: auto;
     display: block;
+    @media (max-height: @max-height) {
+        font-size: 30px;
+    }
 }
 
 .icon-l {
     font-size: 80px;
     text-rendering: auto;
     display: block;
+    @media (max-height: @max-height) {
+        font-size: 40px;
+    }
 }
 
-@media (max-height: 600px) {
-    .view-container {
-        bottom: 42px;
-    }
-
-    .frame {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        border-radius: 15px;
-        display: inline-block;
-    }
-
+@media (max-height: @max-height) {
     .collapse-on-small {
         display: none;
-    }
-
-    .icon-m {
-        font-size: 30px;
-        text-rendering: auto;
-        display: block;
-    }
-
-    .icon-l {
-        font-size: 40px;
-        text-rendering: auto;
-        display: block;
     }
 }
 
@@ -341,15 +341,4 @@ div {
             opacity: 0;
         }
     }
-}
-
-//Bootstrap
-* {
-    webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: inherit;
 }
