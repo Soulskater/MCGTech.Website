@@ -795,7 +795,7 @@ body a:active {
 .header .user-info {
   line-height: 20px;
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 5px;
 }
 .footer {
