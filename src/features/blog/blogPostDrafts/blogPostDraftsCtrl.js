@@ -52,7 +52,8 @@ angular.module("MCGTech")
             $scope.saveBlogPostDraft = function () {
                 $apiService.saveBlogPostDraft($scope.blogPostDraft)
                     .then(function (blogPostDraft) {
-                        angular.extend($scope.blogPostDraft, blogPostDraft);
+                        $scope.blogPostDraft.lastSaved = blogPostDraft.lastSaved;
+                        $scope.blogPostDraft.blogPostDraftId = blogPostDraft.blogPostDraftId;
                     });
             };
 
@@ -65,6 +66,6 @@ angular.module("MCGTech")
                     if($scope.blogPostDraft) {
                         $scope.saveBlogPostDraft();
                     }
-                }, 5000);
+                }, 50000);
             }
         }]);

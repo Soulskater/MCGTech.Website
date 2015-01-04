@@ -856,6 +856,13 @@ body a:active {
   width: 80px;
   height: 80px;
 }
+@media (max-height: 600px) {
+  .icon-loading80 {
+    background: url("../images/loading_32.GIF") no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+}
 .icon-loading128 {
   display: inline-block;
   background: url("../images/loading_128.GIF") no-repeat;

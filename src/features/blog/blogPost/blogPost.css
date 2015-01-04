@@ -3,6 +3,29 @@
   margin-right: auto;
   max-width: 800px;
   text-align: left;
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+}
+.blog-content a:link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #5AA4F9;
+}
+.blog-content a:visited {
+  color: #5AA4F9;
+}
+.blog-content a:hover {
+  color: #4c85f9;
+}
+.blog-content a:active {
+  color: #FFFFFF;
+}
+.blog-content pre {
+  background: #dddddd;
+  color: #000000;
+  padding: 10px;
+  overflow: auto;
 }
 .comment-wrapper {
   padding: 10px;

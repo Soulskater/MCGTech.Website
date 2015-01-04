@@ -4,11 +4,13 @@
 angular.module("MCGTech")
     .controller("ProjectsCtrl", [ "$scope", "navigationService", "projectsService", function ($scope, $navigation, $apiService) {
         $scope.projects = [];
-
+        $scope.loading = false;
         _init();
         function _init() {
+            $scope.loading = true;
             $apiService.getProjects().then(function (projects) {
                 $scope.projects = projects;
+                $scope.loading = false;
             });
         }
 

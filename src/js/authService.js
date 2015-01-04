@@ -2,11 +2,12 @@
  * Created by gmeszaros on 10/31/2014.
  */
 angular.module("MCGTech")
-    .service('authService', ['$http', '$q', 'localStorageService', 'serviceUrl', function ($http, $q, localStorageService, $url) {
+    .service('authService', ['$http', '$q', 'localStorageService', 'serviceUrl', '$timeout', function ($http, $q, localStorageService, $url, $timeout) {
 
         var authServiceFactory = {};
 
         var _authentication = {
+            expiresIn: null,
             isAuthenticated: false,
             userName: ""
         };
@@ -14,12 +15,19 @@ angular.module("MCGTech")
             firstName: "",
             lastName: ""
         };
+        var _sessionTimer;
 
         var _saveRegistration = function (registration) {
             _logOut();
             return $http.post($url.baseUrl + 'api/account/register', registration).then(function (response) {
                 return response;
             });
+        };
+
+        var _startUserLoginSession = function (expiresIn) {
+            _sessionTimer = $timeout(function () {
+                _logOut();
+            }, expiresIn * 1000);
         };
 
         var _login = function (loginData) {
@@ -29,11 +37,16 @@ angular.module("MCGTech")
 
             $http.post($url.baseUrl + 'token', data, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}}).success(function (response) {
                 localStorageService.set('authorizationData', {
+                    loginDate: new Date(),
+                    expiresIn: response.expires_in,
                     token: response.access_token,
                     userName: loginData.userName
                 });
+                _startUserLoginSession(response.expires_in);
                 _getUserProfile().then(function (profile) {
                     localStorageService.set('authorizationData', {
+                        loginDate: new Date(),
+                        expiresIn: response.expires_in,
                         token: response.access_token,
                         userName: loginData.userName,
                         profile: profile
@@ -56,19 +69,25 @@ angular.module("MCGTech")
         var _logOut = function () {
 
             localStorageService.remove('authorizationData');
-
             _authentication.isAuthenticated = false;
             _authentication.userName = "";
             _authentication.profile = {};
+            if (_sessionTimer) {
+                _sessionTimer();
+            }
         };
 
         var _fillAuthData = function () {
 
             var authData = localStorageService.get('authorizationData');
-            if (authData) {
+            if (authData && (new Date() - new Date(authData.loginDate)) < authData.expiresIn) {
                 _authentication.isAuthenticated = true;
                 _authentication.userName = authData.userName;
                 _authentication.profile = authData.profile;
+                _authentication.expiresIn = authData.expiresIn;
+            }
+            else {
+                _logOut();
             }
 
         };

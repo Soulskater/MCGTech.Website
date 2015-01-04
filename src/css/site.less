@@ -144,6 +144,12 @@ body {
         background: url("../images/loading_80.GIF") no-repeat;
         width: 80px;
         height: 80px;
+        @media (max-height: @max-height) {
+            background: url("../images/loading_32.GIF") no-repeat;
+            width: 32px;
+            height: 32px;
+        }
+
     }
     &-loading128 {
         display: inline-block;

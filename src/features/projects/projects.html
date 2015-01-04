@@ -1,9 +1,11 @@
 <div>
-    <div class="icon-back" ng-click="$navigation.go('/home')"
+    <div class="icon-arrow-left-big icon-m" ng-click="$navigation.go('/home')"
          style="position: absolute;margin-left: 30px;margin-top: 10px;"></div>
     <div class="font-l text-center space l top">Projects</div>
-
-    <div class="projects-list space xl top">
+    <div ng-if="loading" class="text-center space xl top">
+        <span class="icon-loading80"></span>
+    </div>
+    <div ng-if="!loading" class="projects-list space xl top">
         <div ng-repeat-start="project in projects" class="project-item font-s" ng-click="openGitDemoPage(project.githubPageUrl)" ng-style="{ background: project.color }">
             {{project.name}}
             <div class="description text-space m left right top">
