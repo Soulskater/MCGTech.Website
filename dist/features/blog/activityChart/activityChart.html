@@ -1,0 +1,9 @@
+<div class="font-s" ng-controller="ActivityChart" ng-init="init(blogPost)">
+    <div class="space xl top" ng-if="!hasData">
+        No Activity
+    </div>
+    <div class="space m top" ng-if="hasData">
+        Activity
+        <highchart config="chartConfig" class="activity-chart"></highchart>
+    </div>
+</div>

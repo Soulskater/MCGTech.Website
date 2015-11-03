@@ -60,13 +60,13 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
  :: Install gulp
-  echo Installing Gulp
-  call npm install
-  echo Installed Gulp Successfully
-  echo Run gulp build task
-  cd %DEPLOYMENT_TARGET%
-  call .\node_modules\.bin\gulp build
-  echo Build executed successfully
+  :: echo Installing Gulp
+  :: call npm install
+  :: echo Installed Gulp Successfully
+  :: echo Run gulp build task
+  :: cd %DEPLOYMENT_TARGET%
+  :: call .\node_modules\.bin\gulp build
+  :: echo Build executed successfully
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

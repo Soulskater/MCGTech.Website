@@ -217,5 +217,4 @@ pip-log.txt
 ## WebStorm
 #############
 .idea/
-dist/
 node_modules

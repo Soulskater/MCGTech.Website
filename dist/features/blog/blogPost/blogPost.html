@@ -1,0 +1,57 @@
+<div>
+    <!--<div class="icon-arrow-left-big icon-m" ng-click="$navigation.go('/blog')"
+         style="position: absolute;margin-left: 30px;margin-top: 10px;"></div>-->
+    <div ng-if="loading" class="text-center space xl top">
+        <span class="icon-loading80"></span>
+    </div>
+    <div ng-if="!loading">
+        <div class="font-l text-center space l top left right">{{blogPost.title}}</div>
+        <div class="text-space l all blog-content fading">
+            <span class="font-xs secondary-text">Author: Gábor Mészáros, Comments: {{blogPost.comments.length}}</span>
+
+            <span class="font-xs secondary-text pull-right">
+                <ratings readonly="true" value="overallRating"></ratings>
+                {{blogPost.created.format("DD MMMM YYYY")}}
+            </span>
+            <div class="font-s" ng-bind-html="blogPost.content">
+
+            </div>
+            <!--Ratings-->
+            <div class="space xl top" ng-if="$authService.user.isAuthenticated && !hasRating()">
+                <div class="font-m space s bottom">
+                    Rate the post
+                </div>
+                <ratings readonly="false" rating-changed="sendRating(rating)">
+                </ratings>
+            </div>
+            <!--Comments-->
+            <div ng-if="blogPost.comments.length > 0" class="font-m space m top">
+                Comments
+            </div>
+            <div ng-if="blogPost.comments.length == 0" class="font-m space m top">
+                No comments
+            </div>
+            <div class="space m all" style="border-bottom: 1px solid rgba(255,255,255, 0.3); overflow: hidden"
+                 ng-repeat="comment in blogPost.comments">
+                <div class="font-s space s bottom">{{comment.comment}}</div>
+                <div class="font-xs secondary-text" style="overflow: hidden;">
+                    <span class="pull-left">{{comment.user.firstName + " " + comment.user.lastName}}</span><span
+                        class="pull-right">{{comment.created.format("DD MMMM YYYY, h:mm a")}}</span>
+                </div>
+            </div>
+            <!--New Comment-->
+            <div class="space xl top" ng-if="$authService.user.isAuthenticated" style="overflow: hidden;">
+                <div class="font-s space s bottom">Write a comment</div>
+                <div class="comment-wrapper blue-grey-50 space s bottom">
+                    <textarea class="comment-area" ng-model="$parent.$parent.newComment"
+                              placeholder="Write a comment as {{$authService.userProfile.firstName + ' ' + $authService.userProfile.lastName}}">
+                    </textarea>
+                </div>
+                <button class="button post light-blue-500 pull-right" ng-click="postComment()">Post</button>
+            </div>
+            <div class="font-s text-center" ng-if="!$authService.user.isAuthenticated">
+                <a href="#login">Log in</a>, or <a href="#signup">Sign up</a> to write comments.
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.blog-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  text-align: left;
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+}
+.blog-content a:link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #5AA4F9;
+}
+.blog-content a:visited {
+  color: #5AA4F9;
+}
+.blog-content a:hover {
+  color: #4c85f9;
+}
+.blog-content a:active {
+  color: #FFFFFF;
+}
+.blog-content pre {
+  background: #dddddd;
+  color: #000000;
+  padding: 10px;
+  overflow: auto;
+}
+.comment-wrapper {
+  padding: 10px;
+}
+.comment-wrapper .comment-area {
+  width: 100%;
+  border: none;
+  height: 200px;
+  padding: 0;
+  resize: none;
+  background: inherit;
+}
+.button {
+  border: none;
+  cursor: pointer;
+}
+.button.post {
+  width: 80px;
+  height: 30px;
+}

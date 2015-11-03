@@ -1,0 +1,30 @@
+<div class="font-l text-center space l top">Sign up</div>
+<div class="form-wrapper space l top">
+    <form class="form" name="form">
+        <div class="form-control-box space m bottom">
+            <input type="text" class="font-s form-control" placeholder="Email"
+                   data-ng-model="registration.userName" required autofocus>
+        </div>
+        <div class="form-control-box space m bottom">
+            <input type="text" class="font-s form-control" placeholder="First name"
+                   data-ng-model="registration.firstName" required autofocus>
+        </div>
+        <div class="form-control-box space m bottom">
+            <input type="text" class="font-s form-control" placeholder="Last name"
+                   data-ng-model="registration.lastName" required autofocus>
+        </div>
+        <div class="form-control-box space m bottom">
+            <input type="password" class="font-s form-control" placeholder="Password" data-ng-model="registration.password"
+                   required>
+        </div>
+        <div class="form-control-box">
+            <input type="password" class="font-s form-control" placeholder="Confirm Password" data-ng-model="registration.confirmPassword"
+                   required>
+        </div>
+        <button class="form-button font-s pull-right space m top" ng-disabled="form.$invalid" data-ng-click="signUp()">Sign up</button>
+        <span ng-if="registering" class="icon-loading32 space m top right pull-right"></span>
+        <div data-ng-hide="message == ''" class="font-s alert clear-all">
+            {{message}}
+        </div>
+    </form>
+</div>

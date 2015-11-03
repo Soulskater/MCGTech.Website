@@ -1,0 +1,37 @@
+<div>
+    <div class="font-l text-center space l top">My Drafts</div>
+    <div ng-if="loading" class="text-center space xl top">
+        <span class="icon-loading80"></span>
+    </div>
+    <div ng-if="!loading" class="fading">
+        <div class="space xl top right draft-list-wrapper">
+            <ul class="draft-list">
+                <li class="draft-list-item font-s light-blue-500" ng-repeat="draft in blogPostDraftList" ng-click="selectDraft(draft)" ng-class="{ selected: draft === blogPostDraft }">
+                    <div class="space m bottom">{{draft.title}}</div>
+                    <div class="last-saved font-xs">Last saved: {{moment(draft.lastSaved).format("DD MM YYYY,h:mm")}}
+                    </div>
+                    <span ng-click="deleteBlogPostDraft($index)" class="delete icon-s icon-trash"></span>
+                </li>
+                <li class="draft-list-item add-new font-s purple-500 space m top" ng-click="addNewDraft()">
+                    Create new
+                </li>
+            </ul>
+        </div>
+
+        <div ng-if="blogPostDraft" class="draft-edit-wrapper space xl left top">
+            <div class="space xl bottom">
+                <div class="title-input-wrapper text-space m all blue-grey-50">
+                    <input type="text" placeholder="New Title" ng-model="blogPostDraft.title"
+                           class="font-m title-input"/>
+                </div>
+            </div>
+            <div class="text-space l top text-editor-wrapper font-s">
+                <text-angular class="text-left blue-grey-50" ng-model="blogPostDraft.content"></text-angular>
+                <div class="text-right space m top">
+                    <div class="btn-l light-blue-500" ng-click="saveBlogPostDraft()">Save</div>
+                    <div class="btn-l purple-500 space s left" ng-click="publishBlogPost()">Publish</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

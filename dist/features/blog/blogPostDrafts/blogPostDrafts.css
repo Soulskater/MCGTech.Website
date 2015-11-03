@@ -1,0 +1,66 @@
+.draft-list-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+.draft-edit-wrapper {
+  display: inline-block;
+}
+.draft-list {
+  width: 350px;
+  list-style-type: none;
+  margin: 0;
+}
+.draft-list .draft-list-item {
+  padding: 5px;
+  margin-bottom: 5px;
+  max-width: 450px;
+  position: relative;
+  cursor: pointer;
+}
+.draft-list .draft-list-item:hover .delete {
+  display: inherit;
+}
+.draft-list .draft-list-item.selected {
+  border: 1px solid rgba(93, 103, 113, 0.65);
+}
+.draft-list .draft-list-item .delete {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+}
+.draft-list .draft-list-item .last-saved {
+  font-style: italic;
+  line-height: 15px;
+}
+.draft-list .add-new {
+  font-style: italic;
+  height: 35px;
+  line-height: 35px;
+}
+.title-input-wrapper .title-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+.text-editor-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+.text-editor-wrapper .form-control {
+  background: inherit !important;
+}
+.text-editor-wrapper .btn-group {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.text-editor-wrapper .btn-group .btn {
+  padding: 10px 0;
+  min-width: 35px;
+  background: #738088;
+  border: none;
+  color: #fff;
+  margin-right: 1px;
+}
