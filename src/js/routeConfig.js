@@ -3,7 +3,7 @@
  */
 angular.module("MCGTech")
     .constant("serviceUrl", {
-        baseUrl: "http://service.mcgtech.net/"
+        baseUrl: "http://service.mgprog.net/"
         //baseUrl: "http://localhost:49994/"
     })
     .config(['$routeProvider', '$locationProvider',
