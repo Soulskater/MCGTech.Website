@@ -5,12 +5,12 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var inject = require('gulp-inject');
 var watch = require('gulp-watch');
-var del = require('del');
+//var del = require('del');
 
-gulp.task('clean', function (cb) {
+//gulp.task('clean', function (cb) {
     // You can use multiple globbing patterns as you would with `gulp.src`
-    del(['dist'], cb);
-});
+//    del(['dist'], cb);
+//});
 
 function copyJs() {
     return gulp.src("src/js/**/*.js")
